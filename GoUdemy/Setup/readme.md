@@ -21,5 +21,4 @@ C:\Users\[username]\AppData\Local\atom\bin\apm install --packages-file packages.
 ```
 
 
-
 ### Mac
