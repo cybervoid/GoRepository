@@ -12,3 +12,6 @@ A repository for learning Go.
   - Unix terminal `https://github.com/golang/go/wiki/SettingGOPATH`
 ## Resources
 1. [GoDocs.org](https://godoc.org/)
+
+## Setup Atom.
+https://atom.io/packages/go-plus
