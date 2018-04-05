@@ -10,8 +10,13 @@ A repository for learning Go.
 2. Set gopath to GoWorkspace
   - Powershell: https://stackoverflow.com/questions/12587253/how-to-modify-gopath-in-powershell  `example powershell command: [Environment]::SetEnvironmentVariable("GOPATH","C:\Users\Go\GoWorkspace")`
   - Unix terminal `https://github.com/golang/go/wiki/SettingGOPATH`
+  -- `export gopath=E:\\my\\go\\workspace`
 ## Resources
 1. [GoDocs.org](https://godoc.org/)
 
 ## Setup Atom.
-https://atom.io/packages/go-plus
+Notes: https://atom.io/packages/go-plus
+`go get -u github.com/joefitzgerald/go-plus`
+
+Go certificate issue:
+https://github.com/trueos/trueos-core/issues/181
