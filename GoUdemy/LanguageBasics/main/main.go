@@ -5,7 +5,9 @@ import (
 )
 
 func main() {
-  basics.ShortHand()
-  basics.AsVars()
+  //basics.ShortHand()
+  //basics.AsVars()
+  //basics.Closure()
+  basics.BlankIdentifierExample()
   //fmt.Println(stringutil.MyName)
 }
