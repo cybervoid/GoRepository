@@ -11,6 +11,9 @@ func main() {
   //basics.BlankIdentifierExample()
   //basics.MemAddress()
   //basics.UseMemAddress()
-  basics.PointerExample()
+  //basics.PointerExample()
+  //basics.UseMemAddressAgain()
+  //basics.ForLoop()
+  basics.WhileLoop()
   //fmt.Println(stringutil.MyName)
 }
