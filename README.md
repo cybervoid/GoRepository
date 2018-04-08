@@ -2,21 +2,4 @@
 A repository for learning Go.
 
 
-## Go Bash commands:
-1. install a package from github: Example  `go get github.com/ethereum/go-ethereum/common`
-
-## Environment Variables
-1. get all go environment variables in bash: `go env`  
-2. Set gopath to GoWorkspace
-  - Powershell: https://stackoverflow.com/questions/12587253/how-to-modify-gopath-in-powershell  `example powershell command: [Environment]::SetEnvironmentVariable("GOPATH","C:\Users\Go\GoWorkspace")`
-  - Unix terminal `https://github.com/golang/go/wiki/SettingGOPATH`
-  -- `export gopath=E:\\my\\go\\workspace`
-## Resources
-1. [GoDocs.org](https://godoc.org/)
-
-## Setup Atom.
-Notes: https://atom.io/packages/go-plus
-`go get -u github.com/joefitzgerald/go-plus`
-
-Go certificate issue:
-https://github.com/trueos/trueos-core/issues/181
+See the ./Setup/ for instructions on setting up your Go workspace, including setting up Atom.
