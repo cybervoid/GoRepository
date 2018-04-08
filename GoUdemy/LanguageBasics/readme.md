@@ -45,3 +45,9 @@ res, _ := http.Get("https://blockexplorer.com/api/addr/1Q85UwrAUKm4EXE5jSmpoyTiy
 ```
 const p string = "my constant example"
 ```
+6. Memory addresses
+```
+a := 43
+fmt.Println("a - ", a)
+fmt.Println("a's memory address - ", &a)
+```
