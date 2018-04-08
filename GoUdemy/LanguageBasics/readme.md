@@ -51,3 +51,12 @@ a := 43
 fmt.Println("a - ", a)
 fmt.Println("a's memory address - ", &a)
 ```
+7. Pointers
+```
+a := 43
+fmt.Println(a)
+fmt.Println(&a)
+//b is a pointer, b points to a's memory address
+var b *int = &a
+fmt.Println(b)
+```
