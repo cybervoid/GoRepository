@@ -30,3 +30,7 @@ var ()
 
 defaults: 0, "", nil, false  (nil not null)
 ```
+3. Importing packages
+```import (
+  "fmt"
+)```

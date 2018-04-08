@@ -1,12 +1,11 @@
 package main
 
 import (
-  "fmt"
-  "../stringutil"
   "../basics"
 )
 
-func main(){
-  basics.shortHand()
+func main() {
+  basics.ShortHand()
+  basics.AsVars()
   //fmt.Println(stringutil.MyName)
 }
