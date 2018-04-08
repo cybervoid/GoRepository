@@ -5,6 +5,7 @@
 ## Atom
 ### Windows
 1. Install Atom
+  - change atom to bash command C:\Program Files\Git\bin
 2. Install Go
 3. Set environment variables
 4. run commands in (Atom terminal):
