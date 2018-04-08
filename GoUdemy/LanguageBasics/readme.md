@@ -10,27 +10,30 @@
 ## Language Syntax
 1. Capitalize variables and methods to make them public
 2. Declaring variables:
- - shorthand (only inside of a func):
+- as variables var
+```
+var aa int32  = 12
+var bb, b2 string = "golang_2", "stored in b2"
+var cc float32 = 4.172
+var dd = true
+
+defaults: 0, "", nil, false  (nil not null)
+```
+- shorthand (only inside of a func):
 ```
 Implicit type inference
 a := 10
 b := "golang"
 c := 4.17
 d := true
-
-fmt.Printf("%v \n", a)
-fmt.Printf("%v \n", b)
-fmt.Printf("%v \n", c)
-fmt.Printf("%v \n", d)
-```
-- var
-```
-var ()
-
-
-defaults: 0, "", nil, false  (nil not null)
 ```
 3. Importing packages
-```import (
+```
+import (
   "fmt"
-)```
+  "somepackage"
+)
+or;
+
+import "fmt"
+```
