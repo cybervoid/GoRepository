@@ -13,12 +13,24 @@ func ForLoop() {
 func WhileLoop(){
 
   var cond = true
-  var counter = 0;
+  var counter = 0
   for cond {
     counter++
     fmt.Println(counter)
     if counter > 10{
       cond = false
+    }
+  }
+}
+
+func BreaksConditions(){
+  var cond = true
+  var counter = 0
+  for cond {
+    counter++
+    fmt.Println(counter)
+    if counter > 10{
+      break
     }
   }
 }
