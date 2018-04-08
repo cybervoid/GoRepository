@@ -3,8 +3,10 @@ package main
 import (
   "fmt"
   "../stringutil"
+  "../basics"
 )
 
 func main(){
-  fmt.Println(stringutil.MyName)
+  basics.shortHand()
+  //fmt.Println(stringutil.MyName)
 }
