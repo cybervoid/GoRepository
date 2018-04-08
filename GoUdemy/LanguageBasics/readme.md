@@ -37,3 +37,11 @@ or;
 
 import "fmt"
 ```
+4. Blank Identifier
+```
+res, _ := http.Get("https://blockexplorer.com/api/addr/1Q85UwrAUKm4EXE5jSmpoyTiys8BCos45J")
+```
+5. Constants
+```
+const p string = "my constant example"
+```
