@@ -1,7 +1,8 @@
 package main
 
 import (
-  "../basics"
+  "../basics";
+  "fmt"
 )
 
 func main() {
@@ -22,6 +23,9 @@ func main() {
   //basics.SwitchOnType("testing")
   //var t = basics.Contact{ "Hello!", "Ryan!" }
   //basics.SwitchOnType(t)
-  basics.IfInitializationStatements(false)
+  //basics.IfInitializationStatements(false)
+  //basics.GreetFull("Bill", "Burr")
+  //fmt.Println(basics.ReturnExample("this is Ryan"))
+  fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
   //fmt.Println(stringutil.MyName)
 }
