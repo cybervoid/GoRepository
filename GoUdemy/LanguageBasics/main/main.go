@@ -33,6 +33,7 @@ func main() {
   //basics.FuncAverageVariadicArgs()
   //basics.ExpressionExample()
   //basics.ClosureExpression()
-  basics.ClosureFunc()
+  //basics.ClosureFunc()
+  basics.ClosureNotAnon()
   //fmt.Println(stringutil.MyName)
 }

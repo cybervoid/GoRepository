@@ -59,6 +59,10 @@ func ClosureExpression() {
   fmt.Printf("%T\n", greets)
 }
 
+func incrementer(x int) int {
+  x++
+  return x
+}
 
 func ClosureFunc(){
   var x int = 0
@@ -66,6 +70,20 @@ func ClosureFunc(){
     x++
     return x
   }
+  fmt.Println(increment())
+  fmt.Println(increment())
+}
+
+func wrapper() func() int {
+  x := 0
+  return func() int {
+    x++
+    return x
+  }
+}
+
+func ClosureNotAnon() {
+  increment := wrapper()
   fmt.Println(increment())
   fmt.Println(increment())
 }
