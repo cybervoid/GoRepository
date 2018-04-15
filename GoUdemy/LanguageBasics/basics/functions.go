@@ -43,6 +43,18 @@ func ExpressionExample(){
   greeting := func() {
     fmt.Println("Hello World")
   } // must always be put into a variable
-
   greeting()
+  fmt.Printf("%T\n", greeting)
+}
+
+func makeGreeter() func() string {
+  return func() string {
+    return "hello world"
+  }
+}
+
+func ClosureExpression() {
+  greets := makeGreeter()
+  fmt.Println(greets())
+  fmt.Printf("%T\n", greets)
 }

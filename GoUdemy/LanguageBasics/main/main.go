@@ -31,6 +31,7 @@ func main() {
   //fmt.Println(basics.ReturnMultiple("Ryan", "Dubs"))
   //fmt.Println(basics.FuncAverageVariadicParams(5.554, 76.766, 123.674, 22.32223))
   //basics.FuncAverageVariadicArgs()
-  basics.ExpressionExample()
+  //basics.ExpressionExample()
+  basics.ClosureExpression()
   //fmt.Println(stringutil.MyName)
 }
