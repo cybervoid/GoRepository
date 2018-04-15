@@ -2,7 +2,7 @@ package main
 
 import (
   "../basics";
-  "fmt"
+
 )
 
 func main() {
@@ -26,6 +26,10 @@ func main() {
   //basics.IfInitializationStatements(false)
   //basics.GreetFull("Bill", "Burr")
   //fmt.Println(basics.ReturnExample("this is Ryan"))
-  fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
+  //fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
+  //fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
+  //fmt.Println(basics.ReturnMultiple("Ryan", "Dubs"))
+  //fmt.Println(basics.FuncAverageVariadicParams(5.554, 76.766, 123.674, 22.32223))
+  basics.FuncAverageVariadicArgs()
   //fmt.Println(stringutil.MyName)
 }
