@@ -34,3 +34,14 @@ func BreaksConditions(){
     }
   }
 }
+
+func SwitchStatements(){
+  switch "Ryan" {
+  case "NotRyan":
+      fmt.Println("Hello not ryan")
+    case "Ryan":
+      fmt.Println("Hello Ryan")
+    default:
+      fmt.Println("Default!")
+  }
+}

@@ -14,6 +14,8 @@ func main() {
   //basics.PointerExample()
   //basics.UseMemAddressAgain()
   //basics.ForLoop()
-  basics.WhileLoop()
+  //basics.WhileLoop()
+  //basics.Cast()
+  basics.RuneCounter()
   //fmt.Println(stringutil.MyName)
 }
