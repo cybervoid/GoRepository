@@ -30,9 +30,19 @@ func FuncAverageVariadicParams(sf ...float64) float64 {
   return total / float64(len(sf))
 }
 
-
 func FuncAverageVariadicArgs() {
   data := []float64 { 43, 44, 53, 64, 12 }
   n := FuncAverageVariadicParams(data...)
   fmt.Println(n)
+}
+
+
+func ExpressionExample(){
+  //anonymous function example
+  //when put into a variable is called an expression
+  greeting := func() {
+    fmt.Println("Hello World")
+  } // must always be put into a variable
+
+  greeting()
 }
