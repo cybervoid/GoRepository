@@ -58,3 +58,14 @@ func ClosureExpression() {
   fmt.Println(greets())
   fmt.Printf("%T\n", greets)
 }
+
+
+func ClosureFunc(){
+  var x int = 0
+  increment := func() int {
+    x++
+    return x
+  }
+  fmt.Println(increment())
+  fmt.Println(increment())
+}
