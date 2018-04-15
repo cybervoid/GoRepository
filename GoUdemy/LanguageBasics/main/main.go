@@ -20,7 +20,8 @@ func main() {
   //basics.SwitchFallthroughStatements()
   //basics.SwitchOnType(5)
   //basics.SwitchOnType("testing")
-  var t = basics.Contact{ "Hello!", "Ryan!" }
-  basics.SwitchOnType(t)
+  //var t = basics.Contact{ "Hello!", "Ryan!" }
+  //basics.SwitchOnType(t)
+  basics.IfInitializationStatements(false)
   //fmt.Println(stringutil.MyName)
 }

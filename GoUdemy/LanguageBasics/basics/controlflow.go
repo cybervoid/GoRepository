@@ -79,11 +79,18 @@ func SwitchOnType(x interface{}){
   }
 }
 
-func IfStatements(condition bool){
-  if bool == true{
+func IfStatements(cond bool){
+  if cond == true {
     fmt.Println("it was true!")
-  }
-  else{
+  } else {
     fmt.Println("it was false!")
+  }
+}
+func IfInitializationStatements(cond bool){
+  b := true
+  if food := "Chocolate"; b {
+    fmt.Println(food)
+  } else {
+    fmt.Println("not food")
   }
 }
