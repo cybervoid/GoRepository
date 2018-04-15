@@ -35,6 +35,8 @@ func BreaksConditions(){
   }
 }
 
+
+
 func SwitchStatements(){
   switch "Ryan" {
   case "NotRyan":
@@ -43,5 +45,45 @@ func SwitchStatements(){
       fmt.Println("Hello Ryan")
     default:
       fmt.Println("Default!")
+  }
+}
+func SwitchFallthroughStatements(){
+  switch "Ryan" {
+  case "NotRyan":
+      fmt.Println("Hello not ryan")
+    case "Ryan":
+      fmt.Println("Hello Ryan")
+      fallthrough
+    case "Fallthrough":
+      fmt.Println("fallthrough executed!")
+    default:
+      fmt.Println("Default!")
+  }
+}
+
+type Contact struct{
+  greeting string
+  name string
+}
+
+func SwitchOnType(x interface{}){
+  switch x. (type) { //this is an assert; asserting x is of type
+  case int:
+    fmt.Println("int")
+  case string:
+    fmt.Println("string")
+  case Contact:
+    fmt.Println("contact")
+  default:
+    fmt.Println("unknown")
+  }
+}
+
+func IfStatements(condition bool){
+  if bool == true{
+    fmt.Println("it was true!")
+  }
+  else{
+    fmt.Println("it was false!")
   }
 }

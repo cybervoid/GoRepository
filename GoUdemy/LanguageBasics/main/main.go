@@ -16,6 +16,11 @@ func main() {
   //basics.ForLoop()
   //basics.WhileLoop()
   //basics.Cast()
-  basics.RuneCounter()
+  //basics.RuneCounter()
+  //basics.SwitchFallthroughStatements()
+  //basics.SwitchOnType(5)
+  //basics.SwitchOnType("testing")
+  var t = basics.Contact{ "Hello!", "Ryan!" }
+  basics.SwitchOnType(t)
   //fmt.Println(stringutil.MyName)
 }
