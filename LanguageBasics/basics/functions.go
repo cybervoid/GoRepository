@@ -99,3 +99,15 @@ func RunCallbacks() {
     fmt.Println(n)
   })
 }
+
+func recursiveFactorial(x int) int {
+  fmt.Println(x)
+  if x == 0 {
+    return 1
+  }
+  return x * recursiveFactorial(x - 1)
+}
+
+func RunRecursiveFactorial() {
+  fmt.Println(recursiveFactorial(4))
+}
