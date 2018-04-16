@@ -44,6 +44,12 @@ xs := []int{} // declare an empty slice
 xs = append(xs, 5) // add int 5 to slice xs  
 ```
 
+- map
+```
+ages := make(map[string] int)
+ages["Ryan"] = 33
+```
+
 Example 3 - Imports
 ```
 import (

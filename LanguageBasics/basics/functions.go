@@ -140,13 +140,15 @@ func RunPassByValue() {
 
   fmt.Println(&age) // 0x82
   fmt.Println(age) // 24
+
 }
+
 
 func changeMe(pointy *int) {
   fmt.Println(pointy) // 0x82...
   fmt.Println(*pointy) // 44
   fmt.Println("Changing pointy's value...")
-  *pointy = 24
+  *pointy = 24 //give me the value at address, and store a new value
   fmt.Println(pointy) //0x82...
   fmt.Println(*pointy) //24...
 }
