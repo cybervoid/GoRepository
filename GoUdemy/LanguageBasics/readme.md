@@ -9,8 +9,7 @@
 
 ## Language Syntax
 1. Capitalize variables and methods to make them public
-2. Declaring variables:
-- as variables var
+2. [Variables](./basics/vars.go)
 ```
 var aa int32  = 12
 var bb, b2 string = "golang_2", "stored in b2"
@@ -37,12 +36,11 @@ or;
 
 import "fmt"
 ```
-4. Blank Identifier
+4. [Blank Identifier](./basics/blank.go)
 ```
 res, _ := http.Get("https://blockexplorer.com/api/addr/1Q85UwrAUKm4EXE5jSmpoyTiys8BCos45J")
 ```
 5. Constants
-
 6. [Memory addresses](./basics/memoryAddresses.go)
 ```
 a := 43
@@ -59,7 +57,7 @@ var b *int = &a
 fmt.Println(b) //print the memory address
 fmt.Println(*b) //print the value at the memory address with the * operator
 ```
-8. [Blank Identifier](./basics/blank.go) 
+8. [Scope](./basics/scope.go)
 9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
 10. [Runes](./basics/runes.go)
 11. [Strings](./basics/stringthings.go)
