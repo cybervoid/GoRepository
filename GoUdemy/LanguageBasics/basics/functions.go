@@ -87,3 +87,15 @@ func ClosureNotAnon() {
   fmt.Println(increment())
   fmt.Println(increment())
 }
+
+//callback: passing a func as an argument
+func callbacks(numbers []int, callback func(int)) {
+  for _, n := range numbers {
+    callback(n)
+  }
+}
+func RunCallbacks(){
+  callbacks([]int{ 10, 3, 43, 44, 76, 7 }, func(n int){
+    fmt.Println(n)
+  })
+}
