@@ -45,6 +45,7 @@ func main() {
   //basics.RunAnonymousSelfExecuting()
   //basics.SliceExample()
   //basics.RunInterfacesExample()
-  basics.RunConcurrency()
+  //basics.RunConcurrency()
+  basics.RunParallel()
   //fmt.Println(stringutil.MyName)
 }
