@@ -40,14 +40,26 @@ import "fmt"
 ```
 res, _ := http.Get("https://blockexplorer.com/api/addr/1Q85UwrAUKm4EXE5jSmpoyTiys8BCos45J")
 ```
-5. Constants
-6. [Memory addresses](./basics/memoryAddresses.go)
+5. Constants - see example 5 below
+6. [Memory addresses](./basics/memoryAddresses.go) - Also see Example 7 below
+7. [Pointers](./basics/pointers.go) - Also see Example 7 below
+8. [Scope](./basics/scope.go)
+9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
+10. [Runes](./basics/runes.go)
+11. [Strings](./basics/stringthings.go)
+12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params.
+
+Example 5
+```
+const p string = "my constant example"
+```
+Example 6
 ```
 a := 43
 fmt.Println("a - ", a)
 fmt.Println("a's memory address - ", &a)
 ```
-7. [Pointers](./basics/pointers.go)
+Example 7
 ```
 a := 43
 fmt.Println(a)
@@ -57,8 +69,3 @@ var b *int = &a
 fmt.Println(b) //print the memory address
 fmt.Println(*b) //print the value at the memory address with the * operator
 ```
-8. [Scope](./basics/scope.go)
-9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
-10. [Runes](./basics/runes.go)
-11. [Strings](./basics/stringthings.go)
-12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params.
