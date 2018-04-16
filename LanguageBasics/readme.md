@@ -4,13 +4,10 @@
 2. `go install` - installs the go program
 3. `go clean ./bin/` - clean's extra "stuff" in directories with leftover build content
 4. `go build /path/main.go`   - builds the go program
-#### In pkg folder
-5. Note system architecture, same commands can run
 
 ## Language Syntax
-1. Capitalize variables and methods to make them public
+1. Public and Private - Capitalize variables and methods to make them public. Lowercase for private.
 2. [Variables](./basics/vars.go)
-
 3. Importing packages
 4. [Blank Identifier](./basics/blank.go) - Also see Example 4 below
 5. Constants - see example 5 below
