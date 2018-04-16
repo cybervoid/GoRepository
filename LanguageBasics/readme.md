@@ -7,7 +7,7 @@
 
 ## Language Syntax
 1. Public and Private - Capitalize variables and methods to make them public. Lowercase for private.
-2. [Variables](./basics/vars.go)
+2. [Variables](./basics/vars.go) - also see example 2 below
 3. Importing packages
 4. [Blank Identifier](./basics/blank.go) - Also see Example 4 below
 5. Constants - see example 5 below
@@ -18,6 +18,7 @@
 10. [Runes](./basics/runes.go)
 11. [Strings](./basics/stringthings.go)
 12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params.
+  1. [Callback Example #2](./examples/filtercallback.go)
 
 Example 2 - Variables
 ```
@@ -35,6 +36,12 @@ a := 10
 b := "golang"
 c := 4.17
 d := true
+```
+- slices
+
+```
+xs := []int{} // declare an empty slice
+xs = append(xs, 5) // add int 5 to slice xs  
 ```
 
 Example 3 - Imports

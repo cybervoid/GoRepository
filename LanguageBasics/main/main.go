@@ -1,8 +1,8 @@
 package main
 
 import (
-  "../basics";
-
+  //"../basics";
+  "../examples"
 )
 
 func main() {
@@ -35,6 +35,7 @@ func main() {
   //basics.ClosureExpression()
   //basics.ClosureFunc()
   //basics.ClosureNotAnon()
-  basics.RunCallbacks()
+  //basics.RunCallbacks()
+  examples.RunFilter()
   //fmt.Println(stringutil.MyName)
 }
