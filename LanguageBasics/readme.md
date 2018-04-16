@@ -10,6 +10,19 @@
 ## Language Syntax
 1. Capitalize variables and methods to make them public
 2. [Variables](./basics/vars.go)
+
+3. Importing packages
+4. [Blank Identifier](./basics/blank.go) - Also see Example 4 below
+5. Constants - see example 5 below
+6. [Memory addresses](./basics/memoryAddresses.go) - Also see Example 7 below
+7. [Pointers](./basics/pointers.go) - Also see Example 7 below
+8. [Scope](./basics/scope.go)
+9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
+10. [Runes](./basics/runes.go)
+11. [Strings](./basics/stringthings.go)
+12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params.
+
+Example 2 - Variables
 ```
 var aa int32  = 12
 var bb, b2 string = "golang_2", "stored in b2"
@@ -26,7 +39,8 @@ b := "golang"
 c := 4.17
 d := true
 ```
-3. Importing packages
+
+Example 3 - Imports
 ```
 import (
   "fmt"
@@ -36,30 +50,21 @@ or;
 
 import "fmt"
 ```
-4. [Blank Identifier](./basics/blank.go)
+Example 4 - Blank Identifier
 ```
 res, _ := http.Get("https://blockexplorer.com/api/addr/1Q85UwrAUKm4EXE5jSmpoyTiys8BCos45J")
 ```
-5. Constants - see example 5 below
-6. [Memory addresses](./basics/memoryAddresses.go) - Also see Example 7 below
-7. [Pointers](./basics/pointers.go) - Also see Example 7 below
-8. [Scope](./basics/scope.go)
-9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
-10. [Runes](./basics/runes.go)
-11. [Strings](./basics/stringthings.go)
-12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params.
-
-Example 5
+Example 5 - Constants
 ```
 const p string = "my constant example"
 ```
-Example 6
+Example 6 - Memory addresses
 ```
 a := 43
 fmt.Println("a - ", a)
 fmt.Println("a's memory address - ", &a)
 ```
-Example 7
+Example 7 - Pointers
 ```
 a := 43
 fmt.Println(a)
