@@ -39,6 +39,11 @@ func main() {
   //examples.RunFilter()
   //basics.RunRecursiveFactorial()
   //basics.RunDefer(false)
-  basics.RunPassByValue()
+  //basics.RunPassByValue()
+  //basics.RunPassByReference()
+  //basics.RunPassByReferenceMap()
+  //basics.RunAnonymousSelfExecuting()
+  //basics.SliceExample()
+  basics.RunInterfacesExample()
   //fmt.Println(stringutil.MyName)
 }

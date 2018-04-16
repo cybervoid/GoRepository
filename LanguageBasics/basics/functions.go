@@ -143,7 +143,6 @@ func RunPassByValue() {
 
 }
 
-
 func changeMe(pointy *int) {
   fmt.Println(pointy) // 0x82...
   fmt.Println(*pointy) // 44
@@ -151,4 +150,33 @@ func changeMe(pointy *int) {
   *pointy = 24 //give me the value at address, and store a new value
   fmt.Println(pointy) //0x82...
   fmt.Println(*pointy) //24...
+}
+
+func changeMake(z []string) {
+  z[0] = "Ryan"
+}
+
+func RunPassByReference() {
+  m := make([]string, 1, 25)
+  fmt.Println(m) //[ ]
+  changeMake(m)
+  fmt.Println(m) //[Ryan]
+}
+
+func RunPassByReferenceMap() {
+  m := make(map[string] int)
+  var key string = "Ryan"
+  changeMap(key, 5, m)
+  fmt.Println(m[key])
+}
+
+func changeMap(key string, newValue int , m map[string] int ) {
+  m[key] = newValue
+}
+
+
+func RunAnonymousSelfExecuting() {
+  func () {
+    fmt.Println("I executed anonymously!")
+  }() //<-- don't forget the paranthesis!
 }

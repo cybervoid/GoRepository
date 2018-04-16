@@ -20,6 +20,8 @@
 12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params, defer, recursion, pass by value
   1. [Callback Example #2](./examples/filtercallback.go)
   2. defer
+13. [Data structures](./basics/datastructures.go)
+14. [Interfaces](./basics/interfaces.go)
 Example 2 - Variables
 ```
 var aa int32  = 12
