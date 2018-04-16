@@ -46,6 +46,6 @@ func main() {
   //basics.SliceExample()
   //basics.RunInterfacesExample()
   //basics.RunConcurrency()
-  basics.RunParallel()
+  basics.RaceCondition()
   //fmt.Println(stringutil.MyName)
 }
