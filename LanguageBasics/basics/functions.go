@@ -111,3 +111,42 @@ func recursiveFactorial(x int) int {
 func RunRecursiveFactorial() {
   fmt.Println(recursiveFactorial(4))
 }
+
+// defers execution of a function until right
+// before the function exits
+func RunDefer(withDefer bool) {
+  if withDefer == true {
+    defer world()
+    hello()
+  } else {
+    world()
+    hello()
+  }
+}
+
+func hello() {
+  fmt.Println("Hello ")
+}
+func world() {
+  fmt.Println("World")
+}
+
+
+func RunPassByValue() {
+  age := 44
+  fmt.Println(&age) //0x82..
+  fmt.Println(age) // 24
+  changeMe(&age) //from 44 to 24
+
+  fmt.Println(&age) // 0x82
+  fmt.Println(age) // 24
+}
+
+func changeMe(pointy *int) {
+  fmt.Println(pointy) // 0x82...
+  fmt.Println(*pointy) // 44
+  fmt.Println("Changing pointy's value...")
+  *pointy = 24
+  fmt.Println(pointy) //0x82...
+  fmt.Println(*pointy) //24...
+}

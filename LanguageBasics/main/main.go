@@ -37,6 +37,8 @@ func main() {
   //basics.ClosureNotAnon()
   //basics.RunCallbacks()
   //examples.RunFilter()
-  basics.RunRecursiveFactorial()
+  //basics.RunRecursiveFactorial()
+  //basics.RunDefer(false)
+  basics.RunPassByValue()
   //fmt.Println(stringutil.MyName)
 }

@@ -17,9 +17,9 @@
 9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
 10. [Runes](./basics/runes.go)
 11. [Strings](./basics/stringthings.go)
-12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params.
+12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params, defer, recursion, pass by value
   1. [Callback Example #2](./examples/filtercallback.go)
-
+  2. defer
 Example 2 - Variables
 ```
 var aa int32  = 12
