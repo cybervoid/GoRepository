@@ -59,4 +59,8 @@ var b *int = &a
 fmt.Println(b) //print the memory address
 fmt.Println(*b) //print the value at the memory address with the * operator
 ```
-8. [Runes](./basics/runes.go)
+8. [Blank Identifier](./basics/blank.go) 
+9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
+10. [Runes](./basics/runes.go)
+11. [Strings](./basics/stringthings.go)
+12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params.
