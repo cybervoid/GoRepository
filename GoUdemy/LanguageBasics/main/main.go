@@ -34,6 +34,7 @@ func main() {
   //basics.ExpressionExample()
   //basics.ClosureExpression()
   //basics.ClosureFunc()
-  basics.ClosureNotAnon()
+  //basics.ClosureNotAnon()
+  basics.RunCallbacks()
   //fmt.Println(stringutil.MyName)
 }

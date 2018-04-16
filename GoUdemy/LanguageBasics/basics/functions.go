@@ -94,7 +94,7 @@ func callbacks(numbers []int, callback func(int)) {
     callback(n)
   }
 }
-func RunCallbacks(){
+func RunCallbacks() {
   callbacks([]int{ 10, 3, 43, 44, 76, 7 }, func(n int){
     fmt.Println(n)
   })

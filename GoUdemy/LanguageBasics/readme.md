@@ -42,16 +42,14 @@ import "fmt"
 res, _ := http.Get("https://blockexplorer.com/api/addr/1Q85UwrAUKm4EXE5jSmpoyTiys8BCos45J")
 ```
 5. Constants
-```
-const p string = "my constant example"
-```
-6. Memory addresses
+
+6. [Memory addresses](./basics/memoryAddresses.go)
 ```
 a := 43
 fmt.Println("a - ", a)
 fmt.Println("a's memory address - ", &a)
 ```
-7. Pointers
+7. [Pointers](./basics/pointers.go)
 ```
 a := 43
 fmt.Println(a)
@@ -61,3 +59,4 @@ var b *int = &a
 fmt.Println(b) //print the memory address
 fmt.Println(*b) //print the value at the memory address with the * operator
 ```
+8. [Runes](./basics/runes.go)
