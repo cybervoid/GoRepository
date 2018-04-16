@@ -22,6 +22,7 @@
   2. defer
 13. [Data structures](./basics/datastructures.go)
 14. [Interfaces](./basics/interfaces.go)
+15. [Concurrency](./basics/concurrency.go)
 Example 2 - Variables
 ```
 var aa int32  = 12

@@ -44,6 +44,7 @@ func main() {
   //basics.RunPassByReferenceMap()
   //basics.RunAnonymousSelfExecuting()
   //basics.SliceExample()
-  basics.RunInterfacesExample()
+  //basics.RunInterfacesExample()
+  basics.RunConcurrency()
   //fmt.Println(stringutil.MyName)
 }
