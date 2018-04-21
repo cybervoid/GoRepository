@@ -5,10 +5,9 @@ This workspace is for learning Go web development.
 1. Set up a working Go environment (not covered in this workspace).
 2. Install GopherJS: `go get -u github.com/gopherjs/gopherjs`
 
-
 ## Workspace content
 1. [Gopherface](./Gopherface) Social Media Web Application, based upon course content in: [LEARNING PATH: Go: Advancing into Web Development with Go](https://www.udemy.com/learning-path-go-advancing-into-web-development-with-go/)
-  1. Source Code: `go get github.com/EngineerKamesh/gofullstack`
+    1. Source Code: `go get github.com/EngineerKamesh/gofullstack`
 
 ## Packages and Libraries
 ### Using GopherJS
@@ -23,11 +22,11 @@ This workspace is for learning Go web development.
     4. Use float64 instead of float32
 3. GopherJS / JavaScript code examples:
     1. alert:
-      1. JavaScript: `alert("Hello GopherJS");`
-      2. GopherJS: `js.Global.Call("alert", "Hello GopherJS!")`
-        - use the `js.Global.Call` function to call a javascript function
-      3. DOM Binding: `dom.GetWindow().Alert("Hello Gopher JS")`
+        1. JavaScript: `alert("Hello GopherJS");`
+        2. GopherJS: `js.Global.Call("alert", "Hello GopherJS!")`
+            - use the `js.Global.Call` function to call a javascript function
+        3. DOM Binding: `dom.GetWindow().Alert("Hello Gopher JS")`
     2. Query selector:
-      1. JavaScript: `element = document.getElementById("navContainer");`
-      2. GopherJS: `element := js.Global.Get("document").Call("getElementById", "navContainer")`
-      3. DOM Binding: `element := dom.GetWindow().Document().GetElementByID("")`
+        1. JavaScript: `element = document.getElementById("navContainer");`
+        2. GopherJS: `element := js.Global.Get("document").Call("getElementById", "navContainer")`
+        3. DOM Binding: `element := dom.GetWindow().Document().GetElementByID("")`
