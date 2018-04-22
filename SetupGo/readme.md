@@ -1,7 +1,13 @@
 # Setup
-1. Atom
+1. Install / Setup Go
+  1. Mac
+  2. Windows
+2. Setup Atom
 
 
+## Setup Go on Mac
+1. [Install Go using Brew.](http://www.golangbootcamp.com/book/get_setup)
+2. Configure Environment - [Golang Setup Docs](https://golang.org/doc/install)
 ## Setting up Atom: Atom
 ### Windows
 1. Install Atom
@@ -44,5 +50,3 @@ Notes: https://atom.io/packages/go-plus
 
 Go certificate issue:
 https://github.com/trueos/trueos-core/issues/181
-
-### Mac
