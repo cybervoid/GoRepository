@@ -1,20 +1,20 @@
 # A section for getting started with Go web development.
-This workspace is for learning Go web development.
+This workspace is for learning Go web development. This workspace content is based [LEARNING PATH: Go: Advancing into Web Development with Go](https://www.udemy.com/learning-path-go-advancing-into-web-development-with-go/)
 
 ## Setting up environment
 1. Set up a working Go environment (not covered in this workspace).
 2. Install GopherJS: `go get -u github.com/gopherjs/gopherjs`
 
 ## Workspace content
-1. [Gopherface](./Gopherface) Social Media Web Application, based upon course content in: [LEARNING PATH: Go: Advancing into Web Development with Go](https://www.udemy.com/learning-path-go-advancing-into-web-development-with-go/)
+1. [Gopherface](./Gopherface) Social Media Web Application.
     1. Source Code: `go get github.com/EngineerKamesh/gofullstack`
 
 ## Packages and Libraries
 ### Using GopherJS
 1. Useful commands:
-    1. Build the JS Source file to be included in the web page: `$gopherjs build`
-    2. Build and minify the JS source file: `$gopherjs build -m`
-    3. Compile Go packages and start the HTTP server: `$gopherjs serve`
+    1. Build the JS Source file to be included in the web page: `gopherjs build`
+    2. Build and minify the JS source file: `gopherjs build -m`
+    3. Compile Go packages and start the HTTP server: `gopherjs serve`
 2. Performance tips:
     1. Use the -m command line flag to generate minified
     2. Enable gzip compression on your web server
