@@ -8,7 +8,6 @@ import (
 
 var d = dom.GetWindow().Document().(dom.HTMLDocument)
 
-
 func run() {
 
 	messageInput := d.GetElementByID("messageInput").(*dom.HTMLInputElement)
@@ -17,7 +16,7 @@ func run() {
 	alertButtonJS.AddEventListener("click", false, func(event dom.Event) {
 		DisplayAlertMessageJSGlobal(messageInput.Value)
 	})
-  //calls display alert DOM message function when click
+
 	alertButtonDOM := d.GetElementByID("alertMessageDOM").(*dom.HTMLButtonElement)
 	alertButtonDOM.AddEventListener("click", false, func(event dom.Event) {
 		DisplayAlertMessageDOM(messageInput.Value)

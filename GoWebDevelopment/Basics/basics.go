@@ -1,16 +1,16 @@
 package main
 
 import (
-  "encoding/json"
-  "fmt"
-  "html/template"
-  "io/ioutil"
-  "log"
-  "net/http"
-  "strings"
-  "github.com/gorilla/mux"
-)
+	"encoding/json"
+	"fmt"
+	"html/template"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"strings"
 
+	"github.com/gorilla/mux"
+)
 
 func renderTemplate(w http.ResponseWriter, templateFile string, templateData interface{}) {
 	t, err := template.ParseFiles(templateFile)
@@ -19,6 +19,7 @@ func renderTemplate(w http.ResponseWriter, templateFile string, templateData int
 	}
 	t.Execute(w, templateData)
 }
+
 func BasicsHandler() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		renderTemplate(w, "./templates/basics.html", nil)
@@ -53,11 +54,15 @@ func LowercaseTextTransformHandler() http.Handler {
 }
 
 func main() {
-  r := mux.NewRouter()
-  r.Handle("/", BasicsHandler()).Methods("GET")
-  r.Handle("/lowercase-text", LowercaseTextTransformHandler())
-  fs := http.FileServer(http.Dir("./static"))
-  http.Handle("/", r)
-  http.Handle("/static/", http.StripPrefix("/static", fs))
-  http.ListenAndServe(":8080", nil)
+
+	r := mux.NewRouter()
+
+	r.Handle("/", BasicsHandler()).Methods("GET")
+	r.Handle("/lowercase-text", LowercaseTextTransformHandler())
+
+	fs := http.FileServer(http.Dir("./static"))
+	http.Handle("/", r)
+	http.Handle("/static/", http.StripPrefix("/static", fs))
+	http.ListenAndServe(":8080", nil)
+
 }
