@@ -8,7 +8,8 @@ This workspace is for learning Go web development. This workspace content is bas
 ## Workspace content
 1. [Gopherface](./Gopherface) Social Media Web Application.
     1. Source Code: `go get github.com/EngineerKamesh/gofullstack`
-2. [Basics](./basics) - Covers basic content. source:  (EngineerKamesh/gofullstack)[https://github.com/EngineerKamesh/gofullstack]
+2. [Basics](./basics) - basic Go examples for using the JavaScript and/or DOM API.
+    1. Covers basic content. This is not original content, content source:  (EngineerKamesh)[https://github.com/EngineerKamesh]
 ## Packages and Libraries
 ### Using GopherJS
 1. Useful commands:
