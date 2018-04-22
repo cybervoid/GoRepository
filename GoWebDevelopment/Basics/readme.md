@@ -5,4 +5,3 @@
 
 ## Required packages
 1. `go get github.com/gorilla/mux`
-2. 
