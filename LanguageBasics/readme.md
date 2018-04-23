@@ -11,7 +11,7 @@
 3. Importing packages
 4. [Blank Identifier](./basics/blank.go) - Also see Example 4 below
 5. Constants - see example 5 below
-6. [Memory addresses](./basics/memoryAddresses.go) - Also see Example 7 below
+6. [Memory addresses](./basics/memoryAddresses.go) - Also see Example 6 below
 7. [Pointers](./basics/pointers.go) - Also see Example 7 below
 8. [Scope](./basics/scope.go)
 9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
@@ -23,6 +23,7 @@
 13. [Data structures](./basics/datastructures.go)
 14. [Interfaces](./basics/interfaces.go)
 15. [Concurrency](./basics/concurrency.go)
+
 Example 2 - Variables
 ```
 var aa int32  = 12

@@ -65,4 +65,9 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static", fs))
 	http.ListenAndServe(":8080", nil)
 
+  if err := r.Shutdown(nil); err != nil {
+      panic(err) // failure/timeout shutting down the server gracefully
+  }
+
+  log.Printf("main: done. exiting")
 }
