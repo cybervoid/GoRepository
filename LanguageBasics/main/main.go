@@ -3,8 +3,6 @@ package main
 import (
   "../basics";
   "fmt"
-  "bufio"
-  "os"
 )
 
 func main() {
@@ -47,11 +45,30 @@ func main() {
   //basics.RunAnonymousSelfExecuting()
   //basics.SliceExample()
   //basics.RunInterfacesExample()
-  //basics.RunConcurrency()
-  //basics.RaceCondition()
+
+  runExample(20)
 
   //printOptions()
+
   //fmt.Println(stringutil.MyName)
+}
+func runExample(selected int) {
+  switch selected {
+  case 18:
+    fmt.Println("RunConcurrency()")
+    basics.RunConcurrency()
+  case 19:
+    fmt.Println("RaceCondition()")
+    basics.RaceCondition()
+  case 20:
+      fmt.Println("MapExample()")
+      basics.MapExample()
+
+  default:
+    fmt.Println("Invalid option")
+  }
+
+
 }
 
 // type option struct {
