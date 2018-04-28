@@ -4,7 +4,7 @@
 2. `go install` - installs the go program
 3. `go clean ./bin/` - clean's extra "stuff" in directories with leftover build content
 4. `go build /path/main.go`   - builds the go program
-
+5. `go run -race main.go` - flag to show race conditions in terminal
 ## Language Syntax
 1. Public and Private - Capitalize variables and methods to make them public. Lowercase for private.
 2. [Variables](./basics/vars.go) - also see example 2 below

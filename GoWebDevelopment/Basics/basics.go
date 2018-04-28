@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 	"strings"
-
+	"time"
 	"github.com/gorilla/mux"
 )
 
@@ -59,7 +59,7 @@ func main() {
 
 	r.Handle("/", BasicsHandler()).Methods("GET")
 	r.Handle("/lowercase-text", LowercaseTextTransformHandler())
-
+	serverTimer := time.NewTimer(2 * time.Second)
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/", r)
 	http.Handle("/static/", http.StripPrefix("/static", fs))
