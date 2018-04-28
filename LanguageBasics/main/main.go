@@ -46,7 +46,7 @@ func main() {
   //basics.SliceExample()
   //basics.RunInterfacesExample()
 
-  runExample(20)
+  runExample(21)
 
   //printOptions()
 
@@ -63,7 +63,9 @@ func runExample(selected int) {
   case 20:
       fmt.Println("MapExample()")
       basics.MapExample()
-
+  case 21:
+    fmt.Println("MutexExample()")
+    basics.MutexExample()
   default:
     fmt.Println("Invalid option")
   }
