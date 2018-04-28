@@ -46,7 +46,7 @@ func main() {
   //basics.SliceExample()
   //basics.RunInterfacesExample()
 
-  runExample(21)
+  runExample(23)
 
   //printOptions()
 
@@ -66,11 +66,15 @@ func runExample(selected int) {
   case 21:
     fmt.Println("MutexExample()")
     basics.MutexExample()
+  case 22:
+    fmt.Println("AtomicityExample()")
+    basics.AtomicityExample()
+  case 23:
+    fmt.Println("ChannelsBasicExample()")
+    basics.ChannelsBasicUnbufferedExample()
   default:
     fmt.Println("Invalid option")
   }
-
-
 }
 
 // type option struct {

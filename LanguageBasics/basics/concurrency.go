@@ -5,6 +5,7 @@ import (
   "sync"
   "time"
   "math/rand"
+  "sync/atomic"
 )
 
 var waitGroup sync.WaitGroup
@@ -28,6 +29,24 @@ func MutexExample() {
   go mutexIncrementor("Foo: ")
   go mutexIncrementor("Bar: ")
   waitGroup.Wait()
+}
+
+var atomicityCounter int64 //int64 is a sign of atomicity
+func AtomicityExample(){
+  waitGroup.Add(2)
+  go atomicityIncrementor("Foo: ")
+  go atomicityIncrementor("Bar: ")
+  waitGroup.Wait();
+  fmt.Println("Counter Final: ", atomicityCounter)
+}
+
+func atomicityIncrementor(s string) {
+  for i := 0; i < 20; i++ {
+    time.Sleep(time.Duration(rand.Intn(3)) *time.Millisecond)
+    atomic.AddInt64(&atomicityCounter, 1);
+    fmt.Println(s, i, "Counter: ", atomicityCounter)
+  }
+  waitGroup.Done()
 }
 
 //helper methods
