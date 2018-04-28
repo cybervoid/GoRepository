@@ -8,7 +8,7 @@
 ## Language Syntax
 1. Public and Private - Capitalize variables and methods to make them public. Lowercase for private.
 2. [Variables](./basics/vars.go) - also see example 2 below
-3. Importing packages
+3. Importing packages - see example 3 below
 4. [Blank Identifier](./basics/blank.go) - Also see Example 4 below
 5. Constants - see example 5 below
 6. [Memory addresses](./basics/memoryAddresses.go) - Also see Example 6 below
@@ -20,9 +20,9 @@
 12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params, defer, recursion, pass by value
   1. [Callback Example #2](./examples/filtercallback.go)
   2. defer
-13. [Data structures](./basics/datastructures.go)
-14. [Interfaces](./basics/interfaces.go)
-15. [Concurrency](./basics/concurrency.go)
+13. [Data structures](./basics/datastructures.go) - Maps, Slices, Arrays, also see example 8 below
+14. [Interfaces](basics/interfaces.go)
+15. [Concurrency](basics/concurrency.go) - includes general concurrency, race conditions
 
 Example 2 - Variables
 ```
@@ -41,19 +41,6 @@ b := "golang"
 c := 4.17
 d := true
 ```
-- slices
-
-```
-xs := []int{} // declare an empty slice
-xs = append(xs, 5) // add int 5 to slice xs  
-```
-
-- map
-```
-ages := make(map[string] int)
-ages["Ryan"] = 33
-```
-
 Example 3 - Imports
 ```
 import (
@@ -87,4 +74,20 @@ fmt.Println(&a)
 var b *int = &a
 fmt.Println(b) //print the memory address
 fmt.Println(*b) //print the value at the memory address with the * operator
+```
+
+Example 8 - Data datastructures
+```
+```
+- slices
+
+```
+xs := []int{} // declare an empty slice
+xs = append(xs, 5) // add int 5 to slice xs  
+```
+
+- maps
+```
+ages := make(map[string] int)
+ages["Ryan"] = 33
 ```

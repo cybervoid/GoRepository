@@ -7,11 +7,27 @@ import (
 )
 
 var waitGroup sync.WaitGroup
-
+var mutex sync.Mutex
+//Concepts
 func RunConcurrency() {
   runWithConcurrency()
 }
 
+func RaceCondition() {
+  waitGroup.Add(2)
+  go incrementor("Foo: ")
+  go incrementor("Bar: ")
+  waitGroup.Wait()
+  fmt.Println("Final Counter: ", counter)
+}
+
+func MutexExample() {
+  waitGroup.Add(2)
+  go incrementor("Foo: ")
+  go incrementor("Bar: ")
+}
+
+//helper methods
 func runWithConcurrency() {
   waitGroup.Add(2)
   go foo()

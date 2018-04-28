@@ -2,7 +2,9 @@ package main
 
 import (
   "../basics";
-  //"../examples"
+  "fmt"
+  "bufio"
+  "os"
 )
 
 func main() {
@@ -46,6 +48,36 @@ func main() {
   //basics.SliceExample()
   //basics.RunInterfacesExample()
   //basics.RunConcurrency()
-  basics.RaceCondition()
+  //basics.RaceCondition()
+
+  //printOptions()
   //fmt.Println(stringutil.MyName)
 }
+
+// type option struct {
+//   name string
+//   function func
+// }
+//
+// func createFuncOptions() (options map[int] *option) {
+//   options = :make(map[int] *option)
+//   var ex option := option{ name: "RaceCondition", function: basics.RaceCondition() }
+//
+//   options[1] = ex
+//   return options
+// }
+//
+// func printOptions() {
+//   var opt := createFuncOptions()
+//   fmt.Println(opt[1])
+//
+//   reader := bufio.NewReader(os.Stdin)
+//   fmt.Print("Enter text: ")
+//   text, _ := reader.ReadString('\n')
+//   fmt.Println(text)
+//
+//   fmt.Println("Enter text: ")
+//   text2 := ""
+//   fmt.Scanln(text2)
+//   fmt.Println(text2)
+// }

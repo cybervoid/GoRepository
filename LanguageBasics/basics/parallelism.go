@@ -19,15 +19,6 @@ func RunParallel() {
   waitGroup.Wait()
 }
 
-
-func RaceCondition() {
-  waitGroup.Add(2)
-  go incrementor("Foo: ")
-  go incrementor("Bar: ")
-  waitGroup.Wait()
-  fmt.Println("Final Counter: ", counter)
-}
-
 func incrementor(s string) {
   for i := 0; i < 20; i++ {
     x := counter
