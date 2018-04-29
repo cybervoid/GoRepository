@@ -2,6 +2,11 @@ package basics
 
 import "fmt"
 
+type Contact struct{
+  Greeting string
+  Name string
+}
+
 func ForLoop() {
   sum := 0
   for i := 0; i < 10; i++ {
@@ -61,10 +66,6 @@ func SwitchFallthroughStatements(){
   }
 }
 
-type Contact struct{
-  greeting string
-  name string
-}
 
 func SwitchOnType(x interface{}){
   switch x. (type) { //this is an assert; asserting x is of type

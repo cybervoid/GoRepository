@@ -1,112 +1,194 @@
 package main
 
 import (
-  "../basics";
+  "../basics"
+  "../examples"
   "fmt"
+  "log"
 )
 
 func main() {
-  //basics.ShortHand()
-  //basics.AsVars()
-  //basics.Closure()
-  //basics.BlankIdentifierExample()
-  //basics.MemAddress()
-  //basics.UseMemAddress()
-  //basics.PointerExample()
-  //basics.UseMemAddressAgain()
-  //basics.ForLoop()
-  //basics.WhileLoop()
-  //basics.Cast()
-  //basics.RuneCounter()
-  //basics.SwitchFallthroughStatements()
-  //basics.SwitchOnType(5)
-  //basics.SwitchOnType("testing")
-  //var t = basics.Contact{ "Hello!", "Ryan!" }
-  //basics.SwitchOnType(t)
-  //basics.IfInitializationStatements(false)
-  //basics.GreetFull("Bill", "Burr")
-  //fmt.Println(basics.ReturnExample("this is Ryan"))
-  //fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
-  //fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
-  //fmt.Println(basics.ReturnMultiple("Ryan", "Dubs"))
-  //fmt.Println(basics.FuncAverageVariadicParams(5.554, 76.766, 123.674, 22.32223))
-  //basics.FuncAverageVariadicArgs()
-  //basics.ExpressionExample()
-  //basics.ClosureExpression()
-  //basics.ClosureFunc()
-  //basics.ClosureNotAnon()
-  //basics.RunCallbacks()
-  //examples.RunFilter()
-  //basics.RunRecursiveFactorial()
-  //basics.RunDefer(false)
-  //basics.RunPassByValue()
-  //basics.RunPassByReference()
-  //basics.RunPassByReferenceMap()
-  //basics.RunAnonymousSelfExecuting()
-  //basics.SliceExample()
-  //basics.RunInterfacesExample()
+  m := getOptions()
+  var lowest int = 0
+  var highest int = 0
+  for k, v := range m {
+      fmt.Printf("%v:\t Enter:\t%v\n", k, v)
+      if(k < highest) {
+        highest = k
+      }
+      if(lowest < k) {
+        lowest = k
+      }
+  }
+  fmt.Printf("Enter Start Code:")
+  var input int
+  _, err := fmt.Scanf("%d", &input)
 
-  runExample(25)
-
-  //printOptions()
-
-  //fmt.Println(stringutil.MyName)
-}
-func runExample(selected int) {
-  switch selected {
-  case 18:
-    fmt.Println("RunConcurrency()")
-    basics.RunConcurrency()
-  case 19:
-    fmt.Println("RaceCondition()")
-    basics.RaceCondition()
-  case 20:
-      fmt.Println("MapExample()")
-      basics.MapExample()
-  case 21:
-    fmt.Println("MutexExample()")
-    basics.MutexExample()
-  case 22:
-    fmt.Println("AtomicityExample()")
-    basics.AtomicityExample()
-  case 23:
-    fmt.Println("ChannelsBasicExample()")
-    basics.ChannelsBasicUnbufferedExample()
-  case 24:
-    fmt.Println("ChannelsUnbufferedCloseExample()")
-    basics.ChannelsBasicUnbufferedExample()
-  case 25:
-    //fmt.Println("MultipleChannelsUnbufferedExample()")
-    basics.MultipleChannelsUnbufferedExample()
-  default:
-    fmt.Println("Invalid option")
+  if(HandleError(err, 1) == false) {
+    runExample(input)
   }
 }
 
-// type option struct {
-//   name string
-//   function func
-// }
-//
-// func createFuncOptions() (options map[int] *option) {
-//   options = :make(map[int] *option)
-//   var ex option := option{ name: "RaceCondition", function: basics.RaceCondition() }
-//
-//   options[1] = ex
-//   return options
-// }
-//
-// func printOptions() {
-//   var opt := createFuncOptions()
-//   fmt.Println(opt[1])
-//
-//   reader := bufio.NewReader(os.Stdin)
-//   fmt.Print("Enter text: ")
-//   text, _ := reader.ReadString('\n')
-//   fmt.Println(text)
-//
-//   fmt.Println("Enter text: ")
-//   text2 := ""
-//   fmt.Scanln(text2)
-//   fmt.Println(text2)
-// }
+func HandleError(err error, catchHandler int) bool {
+  if (err) != nil {
+    fmt.Println(err)
+    if(catchHandler == 0) {
+      return true
+    }
+    if(catchHandler == 1) {
+      log.Fatal(err)
+      return true
+    }
+  } else {
+    return false
+  }
+  return false
+}
+
+func runExample(selected int) {
+  switch selected {
+    case 0:
+      basics.ShortHand()
+    case 1:
+      basics.AsVars()
+    case 2:
+      basics.Closure()
+    case 3:
+      basics.BlankIdentifierExample()
+    case 4:
+      basics.MemAddress()
+    case 5:
+      basics.UseMemAddress()
+    case 6:
+      basics.PointerExample()
+    case 7:
+      basics.UseMemAddressAgain()
+    case 8:
+      fmt.Println("For Loop")
+      basics.ForLoop()
+      fmt.Println("While Loop")
+      basics.WhileLoop()
+    case 9:
+      basics.Cast()
+    case 10:
+      basics.RuneCounter()
+    case 11:
+      basics.SwitchFallthroughStatements()
+    case 12:
+      fmt.Println("Switch:\tint")
+      basics.SwitchOnType(5)
+      fmt.Println("Switch:\tstring")
+      basics.SwitchOnType("testing")
+      fmt.Println("Switch:\tstruct")
+      var t = basics.Contact{ "Hello!", "Ryan!" }
+      basics.SwitchOnType(t)
+    case 13:
+      basics.IfInitializationStatements(false)
+    case 14:
+      basics.GreetFull("Bill", "Burr")
+    case 15:
+      fmt.Println("Basic Return Example: ")
+      fmt.Println(basics.ReturnExample("this is Ryan"))
+      fmt.Println("Assigned Returns: ")
+      fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
+      fmt.Println(basics.ReturnAssigned("Ryan ", "Rules"))
+      fmt.Println("Multiple Returns: ")
+      fmt.Println(basics.ReturnMultiple("Ryan", "Dubs"))
+    case 16:
+      fmt.Println(basics.FuncAverageVariadicParams(5.554, 76.766, 123.674, 22.32223))
+      basics.FuncAverageVariadicArgs()
+    case 17:
+      basics.ExpressionExample()
+    case 18:
+      basics.ClosureExpression()
+      basics.ClosureFunc()
+      basics.ClosureNotAnon()
+    case 19:
+      basics.RunCallbacks()
+    case 20:
+      examples.RunFilter()
+    case 21:
+      basics.RunRecursiveFactorial()
+    case 22:
+      basics.RunDefer(false)
+    case 23:
+      fmt.Println("Pass by Value")
+      basics.RunPassByValue()
+      fmt.Println("Pass by Reference")
+      basics.RunPassByReference()
+      fmt.Println("Pass by Reference Map")
+      basics.RunPassByReference()
+    case 24:
+      basics.RunAnonymousSelfExecuting()
+    case 25:
+      fmt.Println("Slice example")
+      basics.SliceExample()
+      fmt.Println("Map example")
+      basics.MapExample()
+    case 26:
+      basics.RunInterfacesExample()
+    case 27:
+      basics.RunParallel()
+    case 28:
+      fmt.Println("Basic Concurrency")
+      basics.RunConcurrency()
+      fmt.Println("Race Conditions")
+      fmt.Println("run main.go with -race parameter")
+      basics.RaceCondition()
+    case 29:
+      fmt.Println("MutexExample()")
+      basics.MutexExample()
+    case 30:
+      fmt.Println("AtomicityExample()")
+      basics.AtomicityExample()
+    case 31:
+      fmt.Println("Channels - Unbuffered Basic")
+      basics.ChannelsBasicUnbufferedExample()
+      fmt.Println("Channels - Unbuffered with Close")
+      basics.ChannelsBasicUnbufferedExample()
+      fmt.Println("Channels - Multiple Unbuffered")
+      basics.MultipleChannelsUnbufferedExample()
+    case 32:
+      fmt.Println("Semaphore - Example 1")
+      basics.SemaphoreExample()
+    default:
+      fmt.Println("Invalid option")
+  }
+}
+
+func getOptions() (opt map[int] string) {
+  opt = make(map[int] string)
+  opt[0] = "Short Hand"
+  opt[1] ="As Vars"
+  opt[2] = "Closure()"
+  opt[3] = "Blank Identifier"
+  opt[4] = "Memory Address"
+  opt[5] = "Use Memory Addresses"
+  opt[6] = "Pointers"
+  opt[7] = "Use Mem Address Again"
+  opt[8] ="Loops"
+  opt[9] = "Casting"
+  opt[10] = "Runes"
+  opt[11] = "Switch Fall through Statements"
+  opt[12] ="SwitchOnType(interface{})"
+  opt[13] ="If Initialization Statements"
+  opt[14] ="GreetFull Bill"
+  opt[15] = "Return Examples"
+  opt[16] = "Variadics"
+  opt[17] = "Expression Examples"
+  opt[18] = "Closures"
+  opt[19] = "Callbacks"
+  opt[20] = "Filter(s)"
+  opt[21] = "Recursive Factorial"
+  opt[22] = "Run defer"
+  opt[23] = "Passing values by Value"
+  opt[24] = "Anon self executing funcs"
+  opt[25] = "Data Structures"
+  opt[26] = "Interfaces Example"
+  opt[27] = "Parallel Examples"
+  opt[28] = "Concurrency Examples"
+  opt[29] = "Mutex"
+  opt[30] = "Atomicity"
+  opt[31] = "Channels"
+  return opt
+}

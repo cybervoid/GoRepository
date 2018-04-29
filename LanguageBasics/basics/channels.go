@@ -76,3 +76,32 @@ func MultipleChannelsUnbufferedExample() {
     fmt.Println(n)
   }
 }
+
+//A system of sending messages
+func SemaphoreExample() {
+  c := make(chan int)
+  done := make(chan bool)
+
+  go func() {
+    for i := 0; i < 10; i++ {
+      c <- i
+    }
+    done <- true
+  }()
+
+  go func() {
+    for i := 0; i < 10; i++ {
+      c <- i
+    }
+    done <- true
+  }()
+
+  go func() {
+    <- done
+    <- done
+    close(c)
+  }()
+  for n := range c {
+    fmt.Println(n)
+  }
+}
