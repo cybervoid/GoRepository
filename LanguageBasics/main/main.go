@@ -160,7 +160,7 @@ func getOptions() (opt map[int] string) {
   opt = make(map[int] string)
   opt[0] = "Short Hand"
   opt[1] ="As Vars"
-  opt[2] = "Closure()"
+  opt[2] = "Closure"
   opt[3] = "Blank Identifier"
   opt[4] = "Memory Address"
   opt[5] = "Use Memory Addresses"
