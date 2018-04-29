@@ -46,7 +46,7 @@ func main() {
   //basics.SliceExample()
   //basics.RunInterfacesExample()
 
-  runExample(23)
+  runExample(25)
 
   //printOptions()
 
@@ -72,6 +72,12 @@ func runExample(selected int) {
   case 23:
     fmt.Println("ChannelsBasicExample()")
     basics.ChannelsBasicUnbufferedExample()
+  case 24:
+    fmt.Println("ChannelsUnbufferedCloseExample()")
+    basics.ChannelsBasicUnbufferedExample()
+  case 25:
+    //fmt.Println("MultipleChannelsUnbufferedExample()")
+    basics.MultipleChannelsUnbufferedExample()
   default:
     fmt.Println("Invalid option")
   }
