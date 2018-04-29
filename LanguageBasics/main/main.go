@@ -5,27 +5,26 @@ import (
   "../examples"
   "fmt"
   "log"
+  "sort"
 )
 
 func main() {
   m := getOptions()
-  var lowest int = 0
-  var highest int = 0
-  for k, v := range m {
-      fmt.Printf("%v:\t Enter:\t%v\n", k, v)
-      if(k < highest) {
-        highest = k
-      }
-      if(lowest < k) {
-        lowest = k
-      }
+  var keys []int
+  for k := range m {
+    keys = append(keys, k)
+  }
+  sort.Ints(keys)
+
+  for _, k := range keys {
+    fmt.Printf("code: %v \tRuns:\t%v\n",k, m[k] )
   }
   fmt.Printf("Enter Start Code:")
   var input int
   _, err := fmt.Scanf("%d", &input)
 
   if(HandleError(err, 1) == false) {
-    runExample(input)
+    runExample(input, m[input])
   }
 }
 
@@ -45,7 +44,7 @@ func HandleError(err error, catchHandler int) bool {
   return false
 }
 
-func runExample(selected int) {
+func runExample(selected int, exName string) {
   switch selected {
     case 0:
       basics.ShortHand()
@@ -154,6 +153,7 @@ func runExample(selected int) {
     default:
       fmt.Println("Invalid option")
   }
+  fmt.Println("Completed running: \"" + exName +"\"")
 }
 
 func getOptions() (opt map[int] string) {
@@ -190,5 +190,6 @@ func getOptions() (opt map[int] string) {
   opt[29] = "Mutex"
   opt[30] = "Atomicity"
   opt[31] = "Channels"
+  opt[32] = "Semaphore Pattern"
   return opt
 }

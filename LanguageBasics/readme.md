@@ -18,8 +18,7 @@
 10. [Runes](./basics/runes.go)
 11. [Strings](./basics/stringthings.go)
 12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params, defer, recursion, pass by value
-  1. [Callback Example #2](./examples/filtercallback.go)
-  2. defer
+    1. [Callback Example #2](./examples/filtercallback.go) - For another example of a callback
 13. [Data structures](./basics/datastructures.go) - Maps, Slices, Arrays, also see example 8 below
 14. [Interfaces](basics/interfaces.go)
 15. [Concurrency](basics/concurrency.go) - includes general concurrency, race conditions, mutex, atomicity
