@@ -22,7 +22,7 @@
 13. [Data structures](./basics/datastructures.go) - Maps, Slices, Arrays, also see example 8 below
 14. [Interfaces](basics/interfaces.go)
 15. [Concurrency](basics/concurrency.go) - includes general concurrency, race conditions, mutex, atomicity
-15. [Channels](basics/channels.go) - includes
+15. [Channels](basics/channels.go) - includes unbuffered channels, multi channels, semaphores,
 
 Example 2 - Variables
 ```
