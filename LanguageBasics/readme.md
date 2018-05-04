@@ -14,7 +14,7 @@
 6. [Memory addresses](./basics/memoryAddresses.go) - Also see Example 6 below
 7. [Pointers](./basics/pointers.go) - Also see Example 7 below
 8. [Scope](./basics/scope.go)
-9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements
+9. [Control Flow](./basics/controlflow.go) - Includes If statements, loops, switch statements, includes struct example
 10. [Runes](./basics/runes.go)
 11. [Strings](./basics/stringthings.go)
 12. [Functions](./basics/functions.go) - Includes callbacks, expressions, anonymous expressions, parameters, variadic arguments, variadic params, defer, recursion, pass by value
