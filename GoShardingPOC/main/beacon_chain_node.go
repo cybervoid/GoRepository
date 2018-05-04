@@ -6,4 +6,6 @@ func ToHex(s string) {
   return hexutil.Encode(s)
 }
 
-def Sha3()
+//func FromHex()
+
+func Sha3()

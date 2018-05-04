@@ -1,13 +1,13 @@
 package main
 
 import (
-  "../basics"
-  "../examples"
+  //"./NetworkSim"
+  //"./beacon"
   "fmt"
   "log"
   "sort"
 )
 
 func main() {
-  
+
 }
