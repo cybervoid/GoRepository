@@ -13,6 +13,12 @@ const POWDIFF int = 30 * NOTARIES
 const SHARDS int = 4
 
 
-func checkPow(work string, nonce int) {
-  //CONTINUE HERE:
+func checkPow(work int, nonce int) {
+  // discrete log PoW
+  //quadratic nonresidues only
+  return pow(work, nonce, 65537) * POWDIFF < 65537 * 2
+}
+
+func pow(work string, nonce int, input int) int {
+  return 65536;//placeholder
 }
