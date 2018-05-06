@@ -151,8 +151,11 @@ func runExample(selected int, exName string) {
       fmt.Println("Semaphore - Example 1")
       basics.SemaphoreExample()
     case 33:
-      fmt.Println("Structs - Example 1")
+      fmt.Println("Structs")
       basics.StructsExample()
+    case 34:
+      fmt.Println("Structs/Interfaces example")
+      basics.StructsInterfacesExample()
     default:
       fmt.Println("Invalid option")
   }
@@ -195,5 +198,6 @@ func getOptions() (opt map[int] string) {
   opt[31] = "Channels"
   opt[32] = "Semaphore Pattern"
   opt[33] = "Structs Examples"
+  opt[34] = "Structs/Interfaces in Combination"
   return opt
 }
