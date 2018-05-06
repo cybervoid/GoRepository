@@ -29,10 +29,10 @@ type Block struct {
   Ts, PowNonce, Number int
 }
 
-type ChainBlock interface {
-  Init() *Block
-  CheckPOW() *Block
-}
+//type ChainBlock interface {
+//  Init() *Block
+//  CheckPOW() *Block
+//}
 
 func (previousBlock *Block, contents []string) Init() *Block {
   block  := Block { Contents: contents, Parent_Hash: previousBlock.Hash, Number: previousBlock.Number + 1 }
