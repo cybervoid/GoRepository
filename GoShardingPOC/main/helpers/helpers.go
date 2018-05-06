@@ -3,6 +3,7 @@ import (
   "encoding/hex"
   "github.com/ethereum/go-ethereum/crypto/sha3"
   "log"
+  "math/rand"
 )
 
 //Helper functions
@@ -57,4 +58,21 @@ func HashToInt(hash string) int64 {
     o = (o << 8) + c
   }
   return o
+}
+
+func RandStringRunes(n int) string {
+    b := make([]rune, n)
+    for i := range b {
+        b[i] = letterRunes[rand.Intn(len(letterRunes))]
+    }
+    return string(b)
+}
+
+func RandomStringArray(rows int) []string {
+  var newArray [rows]string
+
+  for i := 0; i < rows; i++ {
+    newArray[i] = RandStringRunes(rand.Intn(32))
+  }
+return newArray
 }
