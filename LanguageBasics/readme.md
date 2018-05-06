@@ -22,8 +22,9 @@
 13. [Data structures](./basics/datastructures.go) - Maps, Slices, Arrays, also see example 8 below
 14. [Interfaces](basics/interfaces.go)
 15. [Concurrency](basics/concurrency.go) - includes general concurrency, race conditions, mutex, atomicity
-15. [Channels](basics/channels.go) - includes unbuffered channels, multi channels, semaphores,
-
+16. [Channels](basics/channels.go) - includes unbuffered channels, multi channels, semaphores,
+17. [Structs](./basics/structs.go) - more in-depth information on the topic of structs
+18. [Structs and Interfaces](./basics/structs_and_interfaces.go) - A code file for better understanding how structs and interfaces are used in combination with each other.
 Example 2 - Variables
 ```
 var aa int32  = 12

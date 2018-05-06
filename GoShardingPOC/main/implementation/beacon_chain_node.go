@@ -22,3 +22,31 @@ func checkPow(work int, nonce int) {
 func pow(work string, nonce int, input int) int {
   return 65536;//placeholder
 }
+
+type Block struct {
+  Contents []string
+  Parent_Hash, Hash string
+  Ts, PowNonce, Number int
+}
+
+type ChainBlock interface {
+  Init() *Block
+  CheckPOW() *Block
+}
+
+func (previousBlock *Block, contents []string) Init() *Block {
+  block  := Block { Contents: contents, Parent_Hash: previousBlock.Hash, Number: previousBlock.Number + 1 }
+  return block
+}
+
+
+
+// type MainChainBlock struct {
+//   Parent_hash string
+//   Hash string
+//   ts int
+//
+// }
+// type BeaconBlock struct {
+//
+// }
