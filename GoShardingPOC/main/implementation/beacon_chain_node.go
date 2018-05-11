@@ -1,8 +1,10 @@
 package beacon
 
-//import (
-//  "../helpers"
-//)
+import (
+  "../helpers"
+  "encoding/binary"
+  "bytes"
+)
 
 const NOTARIES int = 40
 const BASE_TS_DIFF int = 1
@@ -49,21 +51,27 @@ type Blockchain interface {
 func (ts int, pownonce int, previousBlock Block) Init() Block {
   var b = new(Block)
   b.Contents = helpers.RandomStringArray(5)
-  b.Parent_Hash = previousBlock.Hash
+  if b.Parent_Hash != nil {
+    b.Parent_Hash = previousBlock.Hash
+    previousBlock.CheckPOW()
+  } else {
+    b.Parent_Hash = byte('\x00') * 32
+  }
+
+  //b.Hash =
   b.Ts = ts
   b.PowNonce = pownonce
+  return b
+}
+
+func (block Block) CheckPOW() Block {
+
 }
 
 //type ChainBlock interface {
 //  Init() *Block
 //  CheckPOW() *Block
 //}
-
-
-func (previousBlock *Block, contents []string) Init() *Block {
-  block  := Block { Contents: contents, Parent_Hash: previousBlock.Hash, Number: previousBlock.Number + 1 }
-  return block
-}
 
 
 

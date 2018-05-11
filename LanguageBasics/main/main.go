@@ -155,7 +155,9 @@ func runExample(selected int, exName string) {
       basics.StructsExample()
     case 34:
       fmt.Println("Structs/Interfaces example")
+      basics.StructsExample()
       basics.StructsInterfacesExample()
+
     default:
       fmt.Println("Invalid option")
   }
