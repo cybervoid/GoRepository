@@ -6,11 +6,10 @@
 1. [implementation/beacon_chain_node.go](./main/implementation/beacon_chain_node.go) corresponds to: [sharding_fork_choice_poc/beacon_chain_node.py](https://github.com/ethereum/research/blob/master/sharding_fork_choice_poc/beacon_chain_node.py)
 2.
 ## Concept References:
-1. [Quadratic Residues](https://en.wikipedia.org/wiki/Quadratic_residue) are referenced in [Beacon Chain Node](./main/implementation/beacon_chain_node.go) - the checkPow() func references quadratic residues as a requirement. Quadratic residues are defined as:
-```In number theory, an integer q is called a quadratic residue modulo n if it is congruent to a perfect square modulo n; i.e., if there exists an integer x such that:  
+1. [Quadratic Residues](https://en.wikipedia.org/wiki/Quadratic_residue) are referenced in [Beacon Chain Node](./main/implementation/beacon_chain_node.go) - the checkPow() func references quadratic residues as a requirement. Quadratic residues are defined as:  
+`In number theory, an integer q is called a quadratic residue modulo n if it is congruent to a perfect square modulo n; i.e., if there exists an integer x such that:`  
 x^2 &#8779; q (mod n)  
-Otherwise, q is called a quadratic nonresidue modulo n.
-```
+`Otherwise, q is called a quadratic nonresidue modulo n.`
   1. [Congruence](https://github.com/cybervoid/Cryptography/blob/master/CryptographyCsharp/CryptographyCsharp/Concepts/Congruence.cs) and [Equivalence](https://github.com/cybervoid/Cryptography/blob/master/CryptographyCsharp/CryptographyCsharp/Concepts/Equivalence.cs) were previously studied in greater detail when learning more about [Cryptography](https://github.com/cybervoid/Cryptography/) in Q3 and Q4 of 2017.
 
 #### Math notes:
