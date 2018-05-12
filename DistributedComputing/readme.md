@@ -35,7 +35,9 @@
                 - `docker run -e NAME=Bill imagefriendlyname` - edit the value in the NAME environment variable
 
 ## References and Resources
-1. Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications [Book](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386) - PacktPublishing Distributed Computing with Go[Github ](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
+1. Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications [Book](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386)
     1. [Color Images for Go Concepts](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
-    2. Book Source Code Repository [Github](http://github.com/last-end/distributed-go)
+    2. Source Code Repositories:
+        - [PacktPublishing](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
+        - [Book Last-End](http://github.com/last-end/distributed-go)
 2. Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services [Book](https://www.amazon.com/Designing-Distributed-Systems-Patterns-Paradigms-ebook/dp/B07CQ9GZ8R/ref=mt_kindle?_encoding=UTF8&me=)
