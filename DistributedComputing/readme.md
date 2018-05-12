@@ -1,0 +1,20 @@
+# A workspace for understanding Go with distributed computing.
+
+
+## Tools
+1. [Glide](https://glide.sh/) - A more advanced package management tool for Go - [Glide Github](https://github.com/Masterminds/glide)
+    - Installation (and sample project):
+        - `curl https://glide.sh/get | sh`
+        - `mkdir new-project && cd new-project`
+        - `glide create`
+        - `glide get github.com/last-ent/skelgor`  
+            - a skeleton go helper project
+        - `glide install`
+            - in case any dependencies or configuration were manually added
+        - `glide up`
+            - update dependencies to latest versions
+        - `tree`
+## References and Resources
+1. [Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386) - [Github: Distributed Computing with Go](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
+    1. [Color Images](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
+2. [Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services](https://www.amazon.com/Designing-Distributed-Systems-Patterns-Paradigms-ebook/dp/B07CQ9GZ8R/ref=mt_kindle?_encoding=UTF8&me=)
