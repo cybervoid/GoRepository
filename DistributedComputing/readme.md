@@ -32,6 +32,9 @@
             3. Commands to install, run our docker image:
                 - `docker build . -t imagefriendlyname`
                 - `docker run imagefriendlyname`
+                - `docker run imagefriendlyname`
+                - `docker run -e NAME=Bill imagefriendlyname`
+            
 
 
 ## References and Resources
