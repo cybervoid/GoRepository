@@ -14,6 +14,26 @@
         - `glide up`
             - update dependencies to latest versions
         - `tree`
+2. Docker
+    1. Working with images
+        1. `docker --version`
+        2. `docker info` - more in depth docker info
+        3. `docker run docker/whalesay cowsay` - run a docker image
+            - `docker pull docker/whalesay & docker run docker/whalesay cowsay` - Alternatively, this is the same command as (3)
+        4. `docker container ls --all` - list of all docker containers
+        5. Removing docker images:
+            - `docker rmi --force 'docker images -q -f dangling=true'` - remove dangling, "unused" docker image(s)
+            - `docker images prune` - remove unused docker images
+            - `docker rm -v imagename` - remove a specific docker image
+    2. Dockerfile(s)
+        1. A basic Docker example, with a Go Program:
+            1. [Example of a basic GoLang Dockerfile](./Docker/Basic/Dockerfile)
+            2. [A basic Go Program](./Docker/Basic/main.go)
+            3. Commands to install, run our docker image:
+                - `docker build . -t imagefriendlyname`
+                - `docker run imagefriendlyname`
+
+
 ## References and Resources
 1. [Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386) - [Github: PacktPublishing Distributed Computing with Go](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
     1. [Color Images for Go Concepts](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
