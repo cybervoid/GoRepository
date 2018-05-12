@@ -30,15 +30,12 @@
             1. [Example of a basic GoLang Dockerfile](./Docker/Basic/Dockerfile)
             2. [A basic Go Program](./Docker/Basic/main.go)
             3. Commands to install, run our docker image:
-                - `docker build . -t imagefriendlyname`
-                - `docker run imagefriendlyname`
-                - `docker run imagefriendlyname`
-                - `docker run -e NAME=Bill imagefriendlyname`
-            
-
+                - `docker build . -t imagefriendlyname` - build the docker image
+                - `docker run imagefriendlyname` - run the docker image program
+                - `docker run -e NAME=Bill imagefriendlyname` - edit the value in the NAME environment variable
 
 ## References and Resources
-1. [Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386) - [Github: PacktPublishing Distributed Computing with Go](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
+1. Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications [Book](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386) - PacktPublishing Distributed Computing with Go[Github ](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
     1. [Color Images for Go Concepts](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
-    2. [Github: Book Source Code Repository](http://github.com/last-end/distributed-go)
-2. [Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services](https://www.amazon.com/Designing-Distributed-Systems-Patterns-Paradigms-ebook/dp/B07CQ9GZ8R/ref=mt_kindle?_encoding=UTF8&me=)
+    2. Book Source Code Repository [Github](http://github.com/last-end/distributed-go)
+2. Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services [Book](https://www.amazon.com/Designing-Distributed-Systems-Patterns-Paradigms-ebook/dp/B07CQ9GZ8R/ref=mt_kindle?_encoding=UTF8&me=)
