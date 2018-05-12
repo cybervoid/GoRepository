@@ -2,7 +2,7 @@
 
 
 ## Tools
-1. [Glide](https://glide.sh/) - A more advanced package management tool for Go - [Glide Github](https://github.com/Masterminds/glide)
+1. [Glide](https://glide.sh/) - A more advanced package management tool for Go - [Github: Glide](https://github.com/Masterminds/glide)
     - Installation (and sample project):
         - `curl https://glide.sh/get | sh`
         - `mkdir new-project && cd new-project`
@@ -15,6 +15,7 @@
             - update dependencies to latest versions
         - `tree`
 ## References and Resources
-1. [Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386) - [Github: Distributed Computing with Go](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
-    1. [Color Images](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
+1. [Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386) - [Github: PacktPublishing Distributed Computing with Go](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
+    1. [Color Images for Go Concepts](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
+    2. [Github: Book Source Code Repository](http://github.com/last-end/distributed-go)
 2. [Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services](https://www.amazon.com/Designing-Distributed-Systems-Patterns-Paradigms-ebook/dp/B07CQ9GZ8R/ref=mt_kindle?_encoding=UTF8&me=)
