@@ -1,7 +1,7 @@
 # A workspace for understanding Go with distributed computing.
 
 
-## Tools
+## Tools and Content
 1. [Glide](https://glide.sh/) - A more advanced package management tool for Go - [Github: Glide](https://github.com/Masterminds/glide)
     - Installation (and sample project):
         - `curl https://glide.sh/get | sh`
@@ -33,7 +33,9 @@
                 - `docker build . -t imagefriendlyname` - build the docker image
                 - `docker run imagefriendlyname` - run the docker image program
                 - `docker run -e NAME=Bill imagefriendlyname` - edit the value in the NAME environment variable
-
+    3. Running unit tests in go
+        1. [Example Tests](./Tests/Examples) 
+        - `go test -v ./{variadic_test.go, variadic.go}`
 ## References and Resources
 1. Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications [Book](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386)
     1. [Color Images for Go Concepts](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
