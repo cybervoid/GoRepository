@@ -1,4 +1,4 @@
-# A workspace for understanding Go with distributed computing.
+# A workspace for learning the basics necessary for distributed computing in Go
 
 
 ## Tools and Content
