@@ -3,7 +3,7 @@ package main
 import (
     "net/http"
     "concierge/api"
-    "concierge/common"
+    "./common"
 )
 
 func main() {
