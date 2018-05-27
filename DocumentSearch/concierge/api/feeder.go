@@ -126,3 +126,66 @@ func lineStore(ch chan lMeta, callback chan lMsg, done chan bool) {
         }
     }
 }
+// indexProcessor is responsible for converting a document
+// into tokens for indexing
+func indexProcessor(ch chan document, lStoreCh chan lMeta, iAddCh chan token, done chan bool) {
+    for {
+        select {
+        case doc := <- ch:
+            docLines := string.Split(doc.Doc, "\n")
+            lin := 0
+            for _, line := range docLine {
+                if strings.TrimSpace(line) == "" {
+                    continue
+                }
+
+                lStoreCh <- lMeta {
+                    LIndex: lin,
+                    Line:   line,
+                    DocID: doc.DocID,
+                }
+                index := 0
+                words := strings.Fields(line)
+                for _, word := range words {
+                    if tok, valid := common.SimplifyToken(word); valid {
+                        Token:  tok,
+                        LIndex: lin,
+                        Line:   line,
+                        Index:  index,
+                        DocID:  doc.DocID,
+                        Title:  doc.Title,
+                    }
+                    index++
+                }
+            }
+            lin++
+        }
+    case <-done:
+        common.Log("Exiting indexProcessor.")
+        return
+    }
+}
+
+// docStore maintains a catalog of all documents being indexed
+func docStore(add chan document, get chan dMsg,
+    dGetAllCh chan dAllMsg, done chan bool) {
+    store := map[string]document{}
+
+    for {
+        select {
+        case doc := <-add:
+            store[doc.DocID] = doc
+        case m := <-get:
+            m.Ch <- store[m.DocID]
+        case ch := <-dGetAllCh:
+            docs := []document{}
+            for _, doc := range store {
+                docs = append(docs, doc)
+            }
+            ch.Ch <- docs
+        case <-done:
+            common.Log("Exiting docStore.")
+            return
+        }
+    }
+}
