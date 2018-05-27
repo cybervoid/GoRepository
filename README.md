@@ -1,12 +1,10 @@
 # GoRepository
 A repository for learning Go. This repository contains mostly code projects from public courses.  
 
-## Start here:
+## Start here - (Getting set up):
 See the [Setup](./SetupGo) folder for information on setting up a Go workspace, including information for setting up [Atom](https://atom.io/).
 
-
-
-## Repository
+## Contents
 1. [LanguageBasics](./LanguageBasics) - A workspace for learning the basics of Go language syntax.
 2. [Setup](./SetupGo) - Contains basic information on how to set up Go Lang and setting up Atom IDE for Go development.
 3. [GoWebDevelopment](./GoWebDevelopment) - A workspace for learning web development with Go
