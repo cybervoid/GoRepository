@@ -20,7 +20,7 @@ func Warn(msg string) {
 }
 
 
-var punctuations = regexp.MustCompile('^\p{P}+|\p{P}+$')
+var punctuations = regexp.MustCompile(`^\p{P}+|\p{P}+$`)
 // List of stop words that we want to ignore in our index.
 var stopWords = []string{ "a", "about", "above", "after", "again", "against", "all", "am", "an", "and", "any", "are", "aren't", "as", "at",
 	"be", "because", "been", "before", "being", "below", "between", "both", "but", "by", "can't", "cannot", "could",

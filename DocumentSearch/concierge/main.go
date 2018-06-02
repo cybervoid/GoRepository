@@ -8,7 +8,7 @@ import (
 
 func main() {
     common.Log("Adding API handlers...")
-    http.HandlerFunc("/api/fedder", api.FeedHandler)
+    http.HandleFunc("/api/fedder", api.FeedHandler)
     common.Log("starting feeder...")
     api.StartFeederSystem()
     common.Log("starting DocumentSearch Concierge server on port :8080")

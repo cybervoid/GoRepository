@@ -254,7 +254,6 @@ func getTitleHash(title string) string {
 
 	return fmt.Sprintf("%x", hByte)
 }
-
 // getFile returns file content after retrieving it from URL.
 func getFile(URL string) (string, error) {
 	var res *http.Response
@@ -276,7 +275,7 @@ func getFile(URL string) (string, error) {
 	defer res.Body.Close()
 
 	if err != nil {
-		errMsg := fmt.Errorf("Error while reading response: URL: %s.\nError: %s", URL, res.StatusCode, err.Error())
+		errMsg := fmt.Errorf("Error while reading response: URL: %s.\nError: %s", URL, err.Error())
 
 		return "", errMsg
 	}
