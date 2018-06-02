@@ -8,7 +8,7 @@ import (
     "net/http"
     "strings"
     "time"
-    "../common"
+    "github.com/cybervoid/GoRepository/DocumentSearch/concierge/common"
 )
 
 

@@ -76,5 +76,4 @@ func TestIndexProcessor(t *testing.T) {
 		})
 	}
 	close(done)
-
 }

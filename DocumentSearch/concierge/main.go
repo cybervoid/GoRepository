@@ -2,8 +2,8 @@
 package main
 import (
     "net/http"
-    "concierge/api"
-    "./common"
+    "github.com/cybervoid/GoRepository/DocumentSearch/concierge/api"
+    "github.com/cybervoid/GoRepository/DocumentSearch/concierge/common"
 )
 
 func main() {
