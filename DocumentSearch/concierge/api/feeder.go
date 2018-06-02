@@ -86,13 +86,10 @@ var pProcessCh chan payload
 // Unless explicitly required by a particular test.
 func StartFeederSystem() {
 	done = make(chan bool)
-
 	dGetCh = make(chan dMsg, 8)
 	dGetAllCh = make(chan dAllMsg)
-
 	iAddCh = make(chan token, 8)
 	pProcessCh = make(chan payload, 8)
-
 	dStoreCh = make(chan document, 8)
 	dProcessCh = make(chan document, 8)
 	lGetCh = make(chan lMsg)
@@ -114,7 +111,6 @@ func indexAdder(ch chan token, done chan bool) {
 		select {
 		case tok := <-ch:
 			fmt.Println("adding to librarian:", tok.Token)
-
 		case <-done:
 			common.Log("Exiting indexAdder.")
 			return
@@ -151,19 +147,16 @@ func indexProcessor(ch chan document, lStoreCh chan lMeta, iAddCh chan token, do
 		select {
 		case doc := <-ch:
 			docLines := strings.Split(doc.Doc, "\n")
-
 			lin := 0
 			for _, line := range docLines {
 				if strings.TrimSpace(line) == "" {
 					continue
 				}
-
 				lStoreCh <- lMeta{
 					LIndex: lin,
 					Line:   line,
 					DocID:  doc.DocID,
 				}
-
 				index := 0
 				words := strings.Fields(line)
 				for _, word := range words {
@@ -181,7 +174,6 @@ func indexProcessor(ch chan document, lStoreCh chan lMeta, iAddCh chan token, do
 				}
 				lin++
 			}
-
 		case <-done:
 			common.Log("Exiting indexProcessor.")
 			return
@@ -219,19 +211,16 @@ func docProcessor(in chan payload, dStoreCh chan document, dProcessCh chan docum
 		case newDoc := <-in:
 			var err error
 			doc := ""
-
 			if doc, err = getFile(newDoc.URL); err != nil {
 				common.Warn(err.Error())
 				continue
 			}
-
 			titleID := getTitleHash(newDoc.Title)
 			msg := document{
 				Doc:   doc,
 				DocID: titleID,
 				Title: newDoc.Title,
 			}
-
 			dStoreCh <- msg
 			dProcessCh <- msg
 		case <-done:
@@ -246,19 +235,15 @@ func docProcessor(in chan payload, dStoreCh chan document, dProcessCh chan docum
 func getTitleHash(title string) string {
 	hash := sha1.New()
 	title = strings.ToLower(title)
-
 	str := fmt.Sprintf("%s-%s", time.Now(), title)
 	hash.Write([]byte(str))
-
 	hByte := hash.Sum(nil)
-
 	return fmt.Sprintf("%x", hByte)
 }
 // getFile returns file content after retrieving it from URL.
 func getFile(URL string) (string, error) {
 	var res *http.Response
 	var err error
-
 	if res, err = http.Get(URL); err != nil {
 		errMsg := fmt.Errorf("Unable to retrieve URL: %s.\nError: %s", URL, err)
 
@@ -270,7 +255,6 @@ func getFile(URL string) (string, error) {
 
 		return "", errMsg
 	}
-
 	body, err := ioutil.ReadAll(res.Body)
 	defer res.Body.Close()
 
@@ -279,7 +263,6 @@ func getFile(URL string) (string, error) {
 
 		return "", errMsg
 	}
-
 	return string(body), nil
 }
 
@@ -307,10 +290,8 @@ func FeedHandler(w http.ResponseWriter, r *http.Request) {
 
 	decoder := json.NewDecoder(r.Body)
 	defer r.Body.Close()
-
 	var newDoc payload
 	decoder.Decode(&newDoc)
 	pProcessCh <- newDoc
-
 	w.Write([]byte(`{"code": 200, "msg": "Request is being processed."}`))
 }
