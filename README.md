@@ -13,7 +13,4 @@ See the [Setup](./SetupGo) folder for information on setting up a Go workspace, 
     2. to better understand the sharding proposal.  
 5. [DistributedComputing](./DistributedComputing) - A workspace for distributed computing relating work.
 6. [DocumentSearch](./DocumentSearch) - A distributed application to index web content and make it easily searchable.
-## Repository Content References
-1. [LanguageBasics](./LanguageBasics), as well as content referenced in the [Setup](./SetupGo) folder is based upon Udemy course [Learn How to Code Go](https://www.udemy.com/learn-how-to-code/learn/v4/overview) by Todd McCleod.
-2. [MoreGo](./MoreGo) is based upon the Udemy course [Advanced Go Programming Course](https://www.udemy.com/advanced-go-programming-course)
-3. [GoWebDevelopment](./GoWebDevelopment) is based upon the Udemy course [LEARNING PATH: Go: Advancing into Web Development with Go](https://www.udemy.com/learning-path-go-advancing-into-web-development-with-go/)
+7. [TestingInGo](./TestingInGo) - example(s) of testing in go.
