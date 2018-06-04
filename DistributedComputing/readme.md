@@ -1,4 +1,4 @@
-# A workspace for learning the basics necessary for distributed computing in Go
+# A workspace for learning the basics necessary for creating distributed computing applications in Go
 
 
 ## Tools and Content
@@ -38,8 +38,4 @@
         - `go test -v ./{variadic_test.go,variadic.go}`
 ## References and Resources
 1. Distributed Computing with Go - Practical Concurrency and Parallelism for Go Applications [Book](https://www.amazon.com/Distributed-Computing-concurrency-parallelism-applications/dp/1787125386)
-    1. [Color Images for Go Concepts](https://www.packtpub.com/sites/default/files/downloads/DistributedComputingwithGo_ColorImages.pdf)
-    2. Source Code Repositories:
-        - [PacktPublishing](https://github.com/PacktPublishing/Distributed-Computing-with-Go)
-        - [Book Last-End](http://github.com/last-end/distributed-go)
 2. Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services [Book](https://www.amazon.com/Designing-Distributed-Systems-Patterns-Paradigms-ebook/dp/B07CQ9GZ8R/ref=mt_kindle?_encoding=UTF8&me=)
