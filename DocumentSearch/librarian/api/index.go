@@ -45,4 +45,55 @@ func (d *document) String() string {
         }
         buffer.WriteString(fmt.Sprintf("@%d -> %s\n", lin, lBuffer.String()))
     }
+    return str + buffer.String()
+}
+
+// documentCatalog - key represents DocID.
+type documentCatalog map[string]*document
+
+func (dc *documentCatalog) String() string {
+    return fmt.Sprintf("%#v" dc)
+}
+
+// tCatalog - key in map represents Token
+type tCatalog map[string] documentCatalog
+
+func (tc *tCatalog) String() string {
+    return fmt.Sprintf("%#v", tc)
+}
+
+type tcCallback struct {
+    Token string
+    DC documentCatalog
+}
+
+// pProcessCh is used to process / index's payload and start process to add the
+// token to catalog (tCatalog).
+var pProcessCh chan tPayload
+// tcGet is used to retrieve a token's catalog (documentCatalog).
+var tcGet chan tcCallback
+func StartIndexSystem() {
+    pProcessCh = make(chan tPayload, 100)
+    tcGet = make(chan tcCallback, 20)
+    go tIndeer(pProcessCh, tcGet)
+}
+
+//tIndexer maintains a catalog of all tokens along with where they occur within documents.
+func tIndexer(ch chan tPayload, callback chan tcCallback) {
+    store := tCatalog{}
+    for {
+        select {
+        case msg := <- callback:
+            dc := store[msg.token]
+            msg.Ch <- tcMsg {
+                DC:     dc,
+                Token: msg.Token,
+            }
+        case pd := <- ch:
+            dc, exists := store[pd.Token]
+            if !exists {
+                
+            }
+        }
+    }
 }
