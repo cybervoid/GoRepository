@@ -29,7 +29,7 @@ func getResults(out chan tcMsg, count int) tCatalog {
     return tc
 }
 
-func getFHScores(docIDScore map[string]int) (map[int] []string, []int) {
+func getFScores(docIDScore map[string]int) (map[int] []string, []int) {
     //fScore maps frequency score to a set of documents.
     fScore := map[int][]string{}
     fSorted := []int{}
@@ -42,4 +42,16 @@ func getFHScores(docIDScore map[string]int) (map[int] []string, []int) {
         }
         sort.Sort(sort.Reverse(sort.IntSlice(fSorted)))
         return fScore, fSorted
+}
+
+func getDocMaps(tc tCatalog) (map[string]int, map[string]tIndices) {
+    // docIDScore maps DocIDs to occurrences of all tokens.
+    // key: DocID
+    // value: sum of all occurrences of tokens so far.
+    docIDScore := map[string]int{}
+    docIndices := map[string]tIndices{}
+    // for each token's catalog
+    for _, dc := range tc {
+        
+        }
 }
