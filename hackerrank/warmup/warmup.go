@@ -19,11 +19,11 @@ func solve(a []int32, b []int32) []int32 {
     var result []int32 = make([]int32, 2)
     for i := 0; i < len(a); i++ {
         if a[i] > b[i] {
-            result[0] = 1
+            result[0] = result[0]+ 1
         } else if a[i] == b[i] {
             continue
         } else {
-            result[1] = 1
+            result[1] = result[1] + 1
         }
     }
     return result
