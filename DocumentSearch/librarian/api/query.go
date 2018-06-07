@@ -52,6 +52,54 @@ func getDocMaps(tc tCatalog) (map[string]int, map[string]tIndices) {
     docIndices := map[string]tIndices{}
     // for each token's catalog
     for _, dc := range tc {
-        
+        // for each document registered under the token
+        for dId, doc := range dc {
+            // add to docID score
+            var tokIndices tIndices
+            for _, tList := range doc.Indices {
+                tokIndices = append(tokIndices, tList...)
+            }
+            docIDScore[dID] += doc.Count
+            dti := docIndices[dID]
+            docIndices[dID] = append(dti, tokIndices...)
         }
+    }
+    return docIDScore, docIndices
+}
+
+func sortResults(tc tCatalog) []docResult {
+    docIDScore, docIndices := getDocMaps(tc)
+    fScore, fSorted := gFScores(docIDScore)
+
+    results := []docResult{}
+    addedDocs := map[string]bool{}
+    for _, score := range fSorted {
+        for _, docID := range fScore[score] {
+            if _, exists := addedDocs[docID]; exists {
+                continue
+            }
+            results = append(results, docResult {
+                DocID:  docID,
+                Score:  score,
+                Indices:    docIndices[docID],
+            })
+            addedDoc[docID] = false
+        }
+    }
+    return results
+}
+
+// getSearchResults returns a list of documents
+// they are listed in the descending order of occurences.
+func getSearchResults(sts []string) []docResult {
+    callback := make(chan tcMsg)
+
+    for _, st := range sts {
+        go func(term string) {
+            tcGet <- tcCallback {
+                Token:  term,
+                Ch: callback,
+            }
+        }(st)
+    }
 }
