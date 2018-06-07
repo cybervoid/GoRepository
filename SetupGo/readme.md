@@ -48,5 +48,6 @@ apm install --packages-file ./src/github.com/GoRepository/Setup/packages.txt
 Notes: https://atom.io/packages/go-plus
 `go get -u github.com/joefitzgerald/go-plus`
 
+
 Go certificate issue:
 https://github.com/trueos/trueos-core/issues/181

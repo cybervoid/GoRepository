@@ -25,6 +25,13 @@
 16. [Channels](basics/channels.go) - includes unbuffered channels, multi channels, semaphores,
 17. [Structs](./basics/structs.go) - more in-depth information on the topic of structs
 18. [Structs and Interfaces](./basics/structs_and_interfaces.go) - A code file for better understanding how structs and interfaces are used in combination with each other. Code is loosely based on a combination of this [Youtube Video](https://www.youtube.com/watch?v=6jY_yU8gPOE) by Jelou odsa and this ["Go by Example - Interfaces"](https://gobyexample.com/interfaces) resource.
+
+## Printf cheat sheet
+1. [Reference](https://www.cheatography.com/gpascual/cheat-sheets/golang-fmt-printing   /)
+    1. `%s`
+    2. `%d`
+    3. `%v`
+
 Example 2 - Variables
 ```
 var aa int32  = 12
