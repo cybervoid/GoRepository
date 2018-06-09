@@ -114,26 +114,33 @@ func runStaircase() {
 }
 
 func miniMaxSum(arr []int32) {
-    var high int32 = 0
-    var low int32 = 0
+	var high int64 = -9223372036854775808
+	var low int64 = 9223372036854775807
 
-    for index := 0; index < len(arr); index++ {
-        total = 0;
-        for i := 0; i < len(arr); i++ {
-
-            if i != index {
-
-
-                }
-        }
-    }
+	for index := 0; index < len(arr); index++ {
+		var total int64 = 0
+		for i := 0; i < len(arr); i++ {
+			if i != index {
+				total += int64(arr[i])
+			}
+		}
+		if total > high {
+			high = total
+		}
+		if total < low {
+			low = total
+		}
+	}
+	fmt.Print(low)
+	fmt.Print(" ")
+	fmt.Print(high)
 }
 func runMiniMaxSum() {
-    arr []int32 = []int32 {1, 2, 3, 4, 5}
-    miniMaxSum(arr)
+	var arr []int32 = []int32{1, 2, 3, 4, 5}
+	miniMaxSum(arr)
 }
 func main() {
-	runMiniMaxSum()
+	//runMiniMaxSum()
 	//runStaircase()
 	//runPlusMinus()
 	//runDiagnalDifference()
