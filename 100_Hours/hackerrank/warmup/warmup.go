@@ -112,8 +112,29 @@ func staircase(n int32) {
 func runStaircase() {
 	staircase(4)
 }
+
+func miniMaxSum(arr []int32) {
+    var high int32 = 0
+    var low int32 = 0
+
+    for index := 0; index < len(arr); index++ {
+        total = 0;
+        for i := 0; i < len(arr); i++ {
+
+            if i != index {
+
+
+                }
+        }
+    }
+}
+func runMiniMaxSum() {
+    arr []int32 = []int32 {1, 2, 3, 4, 5}
+    miniMaxSum(arr)
+}
 func main() {
-	runStaircase()
+	runMiniMaxSum()
+	//runStaircase()
 	//runPlusMinus()
 	//runDiagnalDifference()
 }

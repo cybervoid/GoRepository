@@ -11,3 +11,4 @@ See the [Setup](./SetupGo) folder for information on setting up a Go workspace, 
     1. [DistributedComputing](./DistributedComputing) - A workspace for distributed computing relating work.
     2. [DocumentSearch](./DocumentSearch) - A distributed application that indexes web content and services an application with search results.
 4. [TestingInGo](./TestingInGo) - various example(s) of testing in go.
+5. [100_Hours](./100_Hours) - A project to 100 hours of active, independent Go development. This will not include any code derived from tutorials.
