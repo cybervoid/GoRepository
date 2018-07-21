@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"sort"
-	"github.com/cybervoid/DocumentSearch/librarian/common"
+	"github.com/cybervoid/GoRepository/DocumentSearch/librarian/common"
 )
 
 type docResult struct {
