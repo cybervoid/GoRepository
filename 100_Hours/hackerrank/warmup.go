@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"strings"
+	"strconv"
 )
 
 func solveMeFirst(a uint32, b uint32) uint32 {
@@ -139,7 +141,47 @@ func runMiniMaxSum() {
 	var arr []int32 = []int32{1, 2, 3, 4, 5}
 	miniMaxSum(arr)
 }
+func timeConversion(s string) string {
+	var arr []string = strings.Split(s, ":")
+	var hour int64
+	var minute int64
+	var second int64
+    var isPM bool = false
+	for i := 0; i < len(arr); i++ {
+		if strings.HasSuffix(arr[i], "AM") {
+			isPM = false
+			arr[i] = strings.TrimSuffix(arr[i], "AM")
+		} else if strings.HasSuffix(arr[i], "PM") {
+			isPM = true
+			arr[i] = strings.TrimSuffix(arr[i], "PM")
+		}
+		in, _ := strconv.ParseInt(arr[i], 10, 32)
+
+		if i == 0 {
+			hour = in
+		} else if i == 1 {
+			minute = in
+		} else if i == 2 {
+			second = in
+		}
+	}
+	if isPM == true && hour != 12 {
+		hour = hour + 12
+
+	} else if hour == 12 && isPM == false {
+		hour = 0
+	}
+	return fmt.Sprintf("%02d:%02d:%02d", hour, minute, second)
+}
+func runTimeConversion() {
+	var s string = "12:45:54PM"
+	fmt.Println("Converting: " + s + "  ...")
+	time := timeConversion(s)
+	fmt.Println(time)
+}
+
 func main() {
+	runTimeConversion()
 	//runMiniMaxSum()
 	//runStaircase()
 	//runPlusMinus()
