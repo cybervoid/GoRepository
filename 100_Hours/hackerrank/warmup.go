@@ -179,9 +179,34 @@ func runTimeConversion() {
 	time := timeConversion(s)
 	fmt.Println(time)
 }
-
+func gradingStudents(grades []int32) []int32 {
+	var newGrades []int32 = make([]int32, 0)
+	for i := 0; i < len(grades); i++ {
+		var remainder = grades[i] % 5
+		var rounded bool = false
+		if remainder >= 3 {
+			if grades[i] >= 38 {
+				rounded = true
+				var input int32 = grades[i] + (5 - remainder)
+				newGrades = append(newGrades, input)
+			}
+		}
+		if rounded == false {
+			newGrades = append(newGrades, grades[i])
+		}
+	}
+	return newGrades
+}
+func runGradingStudents() {
+	inputs := []int32{ 73, 67, 38, 33 }
+	results := gradingStudents(inputs)
+	for i := 0; i < len(results); i++ {
+		fmt.Println(results[i])
+	}
+}
 func main() {
-	runTimeConversion()
+	runGradingStudents()
+	//runTimeConversion()
 	//runMiniMaxSum()
 	//runStaircase()
 	//runPlusMinus()
