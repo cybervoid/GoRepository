@@ -27,8 +27,18 @@ func kangaroo(x1 int32, v1 int32, x2 int32, v2 int32) string {
         difference = newDifference
     }
     return "NO"
+}
+func getTotalX(a []int32, b []int32) int32 {
+    var total int32 = 0
+    
 
 }
+func runGetTotalX() {
+    var a []int32 = []int32 { 2, 4 }
+    var b []int32 = []int32 { 16, 32, 96 }
+    total := getTotalX(a, b)
+}
+
 func runKangaroo() {
     fmt.Println(kangaroo(0, 2, 5, 3))
 }
