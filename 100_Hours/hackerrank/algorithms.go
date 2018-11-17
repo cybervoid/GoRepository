@@ -28,9 +28,18 @@ func kangaroo(x1 int32, v1 int32, x2 int32, v2 int32) string {
     }
     return "NO"
 }
+func runKangaroo() {
+    fmt.Println(kangaroo(0, 2, 5, 3))
+}
 func getTotalX(a []int32, b []int32) int32 {
     var total int32 = 0
 	return total
+}
+func runGetTotalX() {
+    var a []int32 = []int32 { 2, 4 }
+    var b []int32 = []int32 { 16, 32, 96 }
+    total := getTotalX(a, b)
+	fmt.Println(total)
 }
 
 // Complete the birthdayCakeCandles function below.
@@ -49,7 +58,6 @@ func birthdayCakeCandles(ar []int32) int32 {
 	}
 	return count
 }
-
 // Complete the birthdayCakeCandles function below.
 func runBirthdayCakeCandles() {
 	var a []int32 = []int32{ 3, 2, 1, 3 }
@@ -57,17 +65,7 @@ func runBirthdayCakeCandles() {
 	fmt.Println(result)
 }
 
-func runGetTotalX() {
-    var a []int32 = []int32 { 2, 4 }
-    var b []int32 = []int32 { 16, 32, 96 }
-    total := getTotalX(a, b)
-	fmt.Println(total)
-}
-
-func runKangaroo() {
-    fmt.Println(kangaroo(0, 2, 5, 3))
-}
 func main() {
-	runBirthdayCakeCandles()
+	//runBirthdayCakeCandles()
     //runKangaroo()
 }
